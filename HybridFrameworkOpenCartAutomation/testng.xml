@@ -8,7 +8,7 @@
   <test  name="E-Banking Test">
     <classes>
    <class name="com.inetbanking.testcases.TC0001_RegistrationTest"/>
-   <!-- <class name="com.inetbanking.testcases.TC01_LoginTest"></class>-->
+  <!--  <class name="com.inetbanking.testcases.TC01_LoginTest"></class>-->
     <!-- <class name="com.inetbanking.testcases.TC02_LoginTestDDT"/>-->
    <!-- <class name="com.inetbanking.testcases.TC003_AddNewCustomer"/>-->
    <!--  <class name="com.inetbanking.testcases.TC04_EditCustomer"/>-->
