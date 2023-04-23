@@ -33,11 +33,11 @@ public class RegistrationPage extends BasePage implements RegistrationPageObject
 			waitTillElementVisible(firstName);
 			type(firstName,firstNameVal );
 			waitTillElementVisible(lastName);
-			type(lastName,firstNameVal );
+			type(lastName,lastNameVal );
 			waitTillElementVisible(email);
-			type(email,firstNameVal );
+			type(email,emailVal );
 			waitTillElementVisible(password);
-			type(password,firstNameVal );
+			type(password,passwordVal );
 			waitTillElementVisible(subScribeNoRadioBtn);
 			scrollIntoView(subScribeNoRadioBtn);
 			waitTillElementClickable(subScribeNoRadioBtn);
