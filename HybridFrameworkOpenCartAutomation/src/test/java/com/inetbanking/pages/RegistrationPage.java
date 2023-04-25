@@ -14,42 +14,44 @@ public class RegistrationPage extends BasePage implements RegistrationPageObject
 		ldriver=driver;
 	}
 	
+//	public void gotTORegistrationPage() throws MyException
+//	{
+//		try {
+//			waitTillElementVisible(myAccountBtn);
+//			clickOn(myAccountBtn);
+//			waitTillElementVisible(registerLink);
+//			clickOn(registerLink);
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//			throw new MyException("Failed to navigate to registration Page");
+//		}
+//	}
+	
+	public void doRegistration(String userName, String emailVal, String passwordVal) throws MyException
+	{
+		try {
+			waitTillElementVisible(userNameField);
+			type(userNameField,userName );
+			waitTillElementVisible(emailField);
+			type(emailField,emailVal );
+			waitTillElementVisible(pwdField);
+			type(pwdField,passwordVal );
+			waitTillElementClickable(registerBtn);
+			clickOn(registerBtn);
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw new MyException("Failed to do registration");
+		}
+	}
+	
 	public void gotTORegistrationPage() throws MyException
 	{
 		try {
-			waitTillElementVisible(myAccountBtn);
-			clickOn(myAccountBtn);
 			waitTillElementVisible(registerLink);
 			clickOn(registerLink);
 		} catch (Exception e) {
 			e.printStackTrace();
 			throw new MyException("Failed to navigate to registration Page");
-		}
-	}
-	
-	public void doRegistration(String firstNameVal, String lastNameVal, String emailVal, String passwordVal) throws MyException
-	{
-		try {
-			waitTillElementVisible(firstName);
-			type(firstName,firstNameVal );
-			waitTillElementVisible(lastName);
-			type(lastName,lastNameVal );
-			waitTillElementVisible(email);
-			type(email,emailVal );
-			waitTillElementVisible(password);
-			type(password,passwordVal );
-			waitTillElementVisible(subScribeNoRadioBtn);
-			scrollIntoView(subScribeNoRadioBtn);
-			waitTillElementClickable(subScribeNoRadioBtn);
-			//clickOn(subScribeNoRadioBtn);
-			clickOnElementUsingJavaScriptExe(subScribeNoRadioBtn);
-			waitTillElementClickable(privacyPolicyChkBox);
-			clickOn(privacyPolicyChkBox);
-			waitTillElementClickable(continueBtn);
-			clickOn(continueBtn);
-		} catch (Exception e) {
-			e.printStackTrace();
-			throw new MyException("Failed to do registration");
 		}
 	}
 }

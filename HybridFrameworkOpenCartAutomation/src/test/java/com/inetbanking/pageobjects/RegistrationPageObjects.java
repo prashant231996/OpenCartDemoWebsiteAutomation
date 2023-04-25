@@ -6,7 +6,15 @@ public interface RegistrationPageObjects {
 	
 	By myAccountBtn=By.xpath("//span[text()='My Account']");
 	
-	By registerLink=By.linkText("Register");
+	By registerLink=By.linkText("Account");
+	
+	By userNameField=By.id("reg_username");
+	
+	By emailField=By.id("reg_email");
+	
+	By pwdField=By.id("reg_password");
+	
+	By registerBtn=By.name("register");
 	
 	By firstName= By.name("firstname");
 	

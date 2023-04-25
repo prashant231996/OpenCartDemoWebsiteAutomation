@@ -13,7 +13,7 @@ public class TC0001_RegistrationTest extends TestBase{
 		try {
 			registrationPage=new RegistrationPage(driver);
 			registrationPage.gotTORegistrationPage();
-			registrationPage.doRegistration("TestName", "TestLastName", "Test@Testmail", "Test");
+			registrationPage.doRegistration("TestName","Test@Testmail", "Test");
 		} catch (Exception e) {
 			e.printStackTrace();
 			throw new MyException("Failed to do registration");
