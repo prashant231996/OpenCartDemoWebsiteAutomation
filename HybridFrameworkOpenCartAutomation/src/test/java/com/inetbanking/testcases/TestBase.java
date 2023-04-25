@@ -20,10 +20,14 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
+import org.testng.asserts.SoftAssert;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
 import com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutor;
 import com.inetbanking.dataprovider.dataProvider;
 import com.inetbanking.pages.RegistrationPage;
+import com.inetbanking.utilities.ExtentReporter;
 import com.inetbanking.utilities.MyException;
 import com.inetbanking.utilities.ReadConfig;
 
@@ -44,6 +48,11 @@ public class TestBase {
 	//public JavaScriptExecutor js;
 	public static RegistrationPage registrationPage;
 	
+//	public static ExtentReports extentReport;
+//	public static ExtentTest extentTest;
+//	public static ThreadLocal<ExtentTest>extentTestThread=new ThreadLocal<ExtentTest>();
+//	
+	SoftAssert softassert=new SoftAssert();
 	
 	@Parameters("browser")
 	@BeforeTest
@@ -82,6 +91,7 @@ public class TestBase {
 	public void tearDown()
 	{
 		//driver.quit();
+		softassert.assertAll();
 	}
 	
 	

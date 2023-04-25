@@ -16,6 +16,8 @@ public interface RegistrationPageObjects {
 	
 	By registerBtn=By.name("register");
 	
+	By regSucMsg=By.xpath("//p[contains(text(),'Hello')]");
+	
 	By firstName= By.name("firstname");
 	
 	By lastName=By.id("input-lastname");

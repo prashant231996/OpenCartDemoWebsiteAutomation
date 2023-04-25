@@ -13,7 +13,8 @@ public class TC0001_RegistrationTest extends TestBase{
 		try {
 			registrationPage=new RegistrationPage(driver);
 			registrationPage.gotTORegistrationPage();
-			registrationPage.doRegistration("TestName","Test@Testmail", "Test");
+			registrationPage.doRegistration("TestName","Test@gmail.com", "Test");
+			softassert.assertTrue(registrationPage.registerSuc(),"Failed to do registration");
 		} catch (Exception e) {
 			e.printStackTrace();
 			throw new MyException("Failed to do registration");

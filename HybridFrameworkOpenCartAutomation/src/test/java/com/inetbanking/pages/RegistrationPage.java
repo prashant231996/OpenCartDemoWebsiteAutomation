@@ -54,4 +54,16 @@ public class RegistrationPage extends BasePage implements RegistrationPageObject
 			throw new MyException("Failed to navigate to registration Page");
 		}
 	}
+	
+	public boolean registerSuc() throws MyException
+	{
+		boolean flag=false;
+		try {
+			flag=isELementDisplayed(regSucMsg);
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw new MyException("Failed to do registration.");
+		}
+		return flag;
+	}
 }

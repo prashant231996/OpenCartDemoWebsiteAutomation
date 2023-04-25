@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="11171" started-at="2023-04-23T14:23:09 IST" finished-at="2023-04-23T14:23:20 IST">
+  <suite name="Suite" duration-ms="21698" started-at="2023-04-25T23:43:52 IST" finished-at="2023-04-25T23:44:14 IST">
     <groups>
     </groups>
-    <test name="E-Banking Test" duration-ms="11171" started-at="2023-04-23T14:23:09 IST" finished-at="2023-04-23T14:23:20 IST">
+    <test name="E-Banking Test" duration-ms="21698" started-at="2023-04-25T23:43:52 IST" finished-at="2023-04-25T23:44:14 IST">
       <class name="com.inetbanking.testcases.TC0001_RegistrationTest">
-        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.inetbanking.testcases.TC0001_RegistrationTest@63a65a25]" name="setUp" is-config="true" duration-ms="7387" started-at="2023-04-23T14:23:09 IST" finished-at="2023-04-23T14:23:17 IST">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.inetbanking.testcases.TC0001_RegistrationTest@4e91d63f]" name="setUp" is-config="true" duration-ms="8457" started-at="2023-04-25T23:43:52 IST" finished-at="2023-04-25T23:44:01 IST">
           <params>
             <param index="0">
               <value>
@@ -18,14 +18,14 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="TC0001_RegistrationTestCase()[pri:0, instance:com.inetbanking.testcases.TC0001_RegistrationTest@63a65a25]" name="TC0001_RegistrationTestCase" duration-ms="3424" started-at="2023-04-23T14:23:17 IST" finished-at="2023-04-23T14:23:20 IST">
+        <test-method status="FAIL" signature="TC0001_RegistrationTestCase()[pri:0, instance:com.inetbanking.testcases.TC0001_RegistrationTest@4e91d63f]" name="TC0001_RegistrationTestCase" duration-ms="12864" started-at="2023-04-25T23:44:01 IST" finished-at="2023-04-25T23:44:14 IST">
           <exception class="com.inetbanking.utilities.MyException">
             <message>
               <![CDATA[Failed to do registration]]>
             </message>
             <full-stacktrace>
               <![CDATA[com.inetbanking.utilities.MyException: Failed to do registration
-at com.inetbanking.testcases.TC0001_RegistrationTest.TC0001_RegistrationTestCase(TC0001_RegistrationTest.java:19)
+at com.inetbanking.testcases.TC0001_RegistrationTest.TC0001_RegistrationTestCase(TC0001_RegistrationTest.java:20)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -60,7 +60,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC0001_RegistrationTestCase -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.inetbanking.testcases.TC0001_RegistrationTest@63a65a25]" name="tearDown" is-config="true" duration-ms="0" started-at="2023-04-23T14:23:20 IST" finished-at="2023-04-23T14:23:20 IST">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.inetbanking.testcases.TC0001_RegistrationTest@4e91d63f]" name="tearDown" is-config="true" duration-ms="1" started-at="2023-04-25T23:44:14 IST" finished-at="2023-04-25T23:44:14 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
