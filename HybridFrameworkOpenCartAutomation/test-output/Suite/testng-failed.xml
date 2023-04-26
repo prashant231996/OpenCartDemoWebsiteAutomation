@@ -11,7 +11,7 @@
         <methods>
           <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="TC0001_RegistrationTestCase"/>
+          <include name="TC0001_RegistrationTestCase" invocation-numbers="0"/>
         </methods>
       </class> <!-- com.inetbanking.testcases.TC0001_RegistrationTest -->
     </classes>

@@ -16,23 +16,24 @@ import com.inetbanking.utilities.ScreenShot;
 
 public class Listner extends TestBase implements ITestListener{
   //  WebDriver driver;
-	ExtentReports extentReport=ExtentReporter.getExtentReports();
-	ExtentTest extentTest;
-	ThreadLocal<ExtentTest>extentTestThread=new ThreadLocal<ExtentTest>();
+//	ExtentReports extentReport=ExtentReporter.getExtentReports();
+//	ExtentTest extentTest;
+//	ThreadLocal<ExtentTest>extentTestThread=new ThreadLocal<ExtentTest>();
 
 	public void onTestStart(ITestResult result) {
 		System.out.println(">>>In Listner");
 		extentTest=extentReport.createTest(result.getName());
-		extentTestThread.set(extentTest);
+		//extentTestThread.set(extentTest);
+		setExtentTest(extentTest);
 	}
 
 	public void onTestSuccess(ITestResult result) {
-		extentTestThread.get().log(Status.PASS, result.getName()+"Passed successfully..");
+		getExtentTest().log(Status.PASS, result.getName()+"Passed successfully..");
 	}
 
 	public void onTestFailure(ITestResult testResult) {
-		extentTestThread.get().fail(testResult.getThrowable());
-		extentTestThread.get().log(Status.FAIL, testResult.getName()+"Test Case got failed");
+		getExtentTest().fail(testResult.getThrowable());
+		getExtentTest().log(Status.FAIL, testResult.getName()+"Test Case got failed");
 	//	     driver=null;
 			String testName=testResult.getName();
 			//driver=getDriver();
@@ -44,7 +45,7 @@ public class Listner extends TestBase implements ITestListener{
 			}
 			 String screenShotFilePath=ScreenShot.getScreenShot(driver,testName);
 			 try {
-				extentTestThread.get().addScreenCaptureFromPath(screenShotFilePath, testName);
+				 getExtentTest().addScreenCaptureFromPath(screenShotFilePath, testName);
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -52,7 +53,7 @@ public class Listner extends TestBase implements ITestListener{
 	}
 
 	public void onTestSkipped(ITestResult result) {
-		extentTestThread.get().log(Status.SKIP, "Test Cases Skipeed succesffully..");
+		getExtentTest().log(Status.SKIP, "Test Cases Skipeed succesffully..");
 	}
 
 	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {

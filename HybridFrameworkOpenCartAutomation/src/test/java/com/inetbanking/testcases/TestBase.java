@@ -48,10 +48,10 @@ public class TestBase {
 	//public JavaScriptExecutor js;
 	public static RegistrationPage registrationPage;
 	
-//	public static ExtentReports extentReport;
-//	public static ExtentTest extentTest;
-//	public static ThreadLocal<ExtentTest>extentTestThread=new ThreadLocal<ExtentTest>();
-//	
+	protected static ExtentReports extentReport=new ExtentReports();
+	protected static ExtentTest extentTest;
+	protected static ThreadLocal<ExtentTest>extentTestThread=new ThreadLocal<ExtentTest>();
+	
 	SoftAssert softassert=new SoftAssert();
 	
 	@Parameters("browser")
@@ -84,6 +84,7 @@ public class TestBase {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		//myWait=new WebDriverWait(driver, 10);
 		//js=(JavaScriptExecutor)driver;
+		extentReport=ExtentReporter.getExtentReports();
 		driver.get(baseUrl);
 	}
 	
@@ -130,6 +131,15 @@ public class TestBase {
 		return randomNumber;
 	}
 	
+	public void setExtentTest(ExtentTest test)
+	{
+		extentTestThread.set(test);
+	}
+	
+	public ExtentTest getExtentTest()
+	{
+		return extentTestThread.get();
+	}
 	
 	
 
