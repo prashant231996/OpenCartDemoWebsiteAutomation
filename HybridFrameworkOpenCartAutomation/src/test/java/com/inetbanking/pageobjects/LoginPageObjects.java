@@ -10,6 +10,10 @@ public interface LoginPageObjects {
 	
 	By loginBtn=By.name("login");
 	
+	By accountBtn=By.linkText("Account");
+	
+	By userNameText=By.xpath("(//strong[text()='TestName'])[1]");
+	
 	
 
 }

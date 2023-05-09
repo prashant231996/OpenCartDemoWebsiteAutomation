@@ -10,6 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutor;
@@ -271,13 +272,65 @@ public class BasePage extends TestBase{
 		{
 			try {
 				WebElement element=identify(ele);
-				waitTillWebLementVisible(element);
+				//waitTillWebLementVisible(element);
 				 // Javascript executor
 			      ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);", element);
-			      
+			      Thread.sleep(2000);
 			} catch (Exception e) {
 				e.printStackTrace();
 				throw new MyException("Failed to scroll to the element");
+			}
+		}
+		
+		//Get Text from Elelment
+		public String getTextFromElement(By ele) throws MyException
+		{
+			String text;
+			try {
+				text=identify(ele).getText();
+			} catch (Exception e) {
+				// TODO: handle exception
+				e.printStackTrace();
+				throw new MyException("Failed to get text from element");
+			}
+			return text;
+		}
+		
+		//Select value from dropDown
+		public void selectByValue(By ele, String visibleText) throws MyException
+		{
+			try {
+				WebElement element=identify(ele);
+				Select dropDown=new Select(element);
+				dropDown.selectByVisibleText(visibleText);
+			} catch (Exception e) {
+				e.printStackTrace();
+				throw new MyException("Failed to select from dropdown");
+			}
+		}
+		
+		public boolean isElementDisplayed(By ele) throws MyException
+		{
+			boolean flag=false;
+			try {
+				flag=identify(ele).isDisplayed();
+			} catch (Exception e) {
+				e.printStackTrace();
+				throw new MyException("Element is not displayed");
+			}
+			return flag;
+		}
+		
+		//Scroll Upto Bottom of webPage
+		public void scrollUptoBottomPfPage()
+		{
+			try {
+				//to perform scroll on an application using Selenium
+				   JavascriptExecutor js = (JavascriptExecutor) driver;
+				   js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
+			} catch (Exception e) {
+				// TODO: handle exception
+				e.printStackTrace();
 			}
 		}
 

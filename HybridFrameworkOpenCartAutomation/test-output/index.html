@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button class="button" id="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Suite">
-              <span class="suite-name border-failed">Suite</span>
+              <span class="suite-name border-passed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,21 +93,31 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
                     </span>
-                    <div class="method-list-content failed suite-Suite">
+                    <div class="method-list-content passed suite-Suite">
                       <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.inetbanking.testcases.TC0001_RegistrationTest" hash-for-method="TC0001_RegistrationTestCase(public void com.inetbanking.testcases.TC0001_RegistrationTest.TC0001_RegistrationTestCase(java.lang....)">TC0001_RegistrationTestCase(public void com.inetbanking.testcases.TC0001_RegistrationTest.TC0001_RegistrationTestCase(java.lang....)</a> <!-- method navigator-link -->
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.inetbanking.testcases.TC0003_AddToCartTest" hash-for-method="addToCartTest(jeans, Sort by popularity)">addToCartTest(jeans, Sort by popularity)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Suite -->
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.inetbanking.testcases.TC0002_LoginTest" hash-for-method="doLoginInCart(TestName, test)">doLoginInCart(TestName, test)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.inetbanking.testcases.TC0003_AddToCartTest" hash-for-method="purchaceProductTest">purchaceProductTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -119,27 +129,45 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-failed">
+          <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">com.inetbanking.testcases.TC0001_RegistrationTest</span>
+              <img src="passed.png"/>
+              <span class="class-name">com.inetbanking.testcases.TC0002_LoginTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="TC0001_RegistrationTestCase(public void com.inetbanking.testcases.TC0001_RegistrationTest.TC0001_RegistrationTestCase(java.lang....)">
-                  </a> <!-- TC0001_RegistrationTestCase(public void com.inetbanking.testcases.TC0001_RegistrationTest.TC0001_RegistrationTestCase(java.lang....) -->
-                  <span class="method-name">TC0001_RegistrationTestCase</span>
-                  <span class="parameters">(public void com.inetbanking.testcases.TC0001_RegistrationTest.TC0001_RegistrationTestCase(java.lang.reflect.Method) throws com.inetbanking.utilities.MyException)</span>
-                  <div class="stack-trace">com.inetbanking.utilities.MyException: Failed to do registration
-	at com.inetbanking.testcases.TC0001_RegistrationTest.TC0001_RegistrationTestCase(TC0001_RegistrationTest.java:27)
-	at java.util.ArrayList.forEach(ArrayList.java:1259)
-... Removed 27 stack frames
-</div> <!-- stack-trace -->
+                  <a name="doLoginInCart(TestName, test)">
+                  </a> <!-- doLoginInCart(TestName, test) -->
+                  <span class="method-name">doLoginInCart</span>
+                  <span class="parameters">(TestName, test)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.inetbanking.testcases.TC0003_AddToCartTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="addToCartTest(jeans, Sort by popularity)">
+                  </a> <!-- addToCartTest(jeans, Sort by popularity) -->
+                  <span class="method-name">addToCartTest</span>
+                  <span class="parameters">(jeans, Sort by popularity)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="purchaceProductTest">
+                  </a> <!-- purchaceProductTest -->
+                  <span class="method-name">purchaceProductTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -156,7 +184,8 @@
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;E-Banking Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.inetbanking.testcases.TC0001_RegistrationTest&quot;/&gt;
+      &lt;class name=&quot;com.inetbanking.testcases.TC0002_LoginTest&quot;/&gt;
+      &lt;class name=&quot;com.inetbanking.testcases.TC0003_AddToCartTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- E-Banking Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -170,7 +199,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">E-Banking Test (1 class)</span>
+                <span class="test-name">E-Banking Test (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -196,16 +225,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'TC0001_RegistrationTestCase')
-data.setCell(0, 2, 'com.inetbanking.testcases.TC0001_RegistrationTest')
-data.setCell(0, 3, 12625);
+data.setCell(0, 1, 'addToCartTest')
+data.setCell(0, 2, 'com.inetbanking.testcases.TC0003_AddToCartTest')
+data.setCell(0, 3, 11021);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'doLoginInCart')
+data.setCell(1, 2, 'com.inetbanking.testcases.TC0002_LoginTest')
+data.setCell(1, 3, 3169);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'purchaceProductTest')
+data.setCell(2, 2, 'com.inetbanking.testcases.TC0003_AddToCartTest')
+data.setCell(2, 3, 2518);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 12 seconds</span>
+              <span class="suite-total-time">Total running time: 16 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -220,9 +257,16 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">1 ignored method</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.inetbanking.testcases.TC0003_AddToCartTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">setUp</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Suite" class="panel">
@@ -231,20 +275,33 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.inetbanking.testcases.TC0001_RegistrationTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.inetbanking.testcases.TC0002_LoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">setUp(chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">TC0001_RegistrationTestCase(public void com.inetbanking.testcases.TC0001_RegistrationTest.TC0001_RegistrationTestCase(java.lang....)</span>
-                <span class="method-start">9364 ms</span>
+                <span class="method-name">doLoginInCart(TestName, test)</span>
+                <span class="method-start">7999 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">22246 ms</span>
+                <span class="method-start">11186 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.inetbanking.testcases.TC0003_AddToCartTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">addToCartTest(jeans, Sort by popularity)</span>
+                <span class="method-start">11229 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">purchaceProductTest</span>
+                <span class="method-start">22255 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">24776 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
