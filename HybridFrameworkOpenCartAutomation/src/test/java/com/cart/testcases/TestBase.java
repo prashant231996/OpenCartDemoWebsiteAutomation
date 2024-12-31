@@ -141,12 +141,6 @@ public class TestBase {
 		return extentTestThread.get();
 	}
 	
-	@BeforeMethod
-	public void setUp(Method method)
-	{
-		setExtentTest(extentReport.createTest(method.getName()));
-	}
-	
 	
 
 	

@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="14350" started-at="2024-12-31T13:09:30 IST" finished-at="2024-12-31T13:09:44 IST">
+  <suite name="Suite" duration-ms="14354" started-at="2024-12-31T22:14:41 IST" finished-at="2024-12-31T22:14:55 IST">
     <groups>
     </groups>
-    <test name="E-Banking Test" duration-ms="14350" started-at="2024-12-31T13:09:30 IST" finished-at="2024-12-31T13:09:44 IST">
+    <test name="E-Banking Test" duration-ms="14354" started-at="2024-12-31T22:14:41 IST" finished-at="2024-12-31T22:14:55 IST">
       <class name="com.cart.testcases.TC0002_LoginTest">
-        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.cart.testcases.TC0002_LoginTest@1ffe63b9]" name="setUp" is-config="true" duration-ms="9351" started-at="2024-12-31T13:09:30 IST" finished-at="2024-12-31T13:09:39 IST">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.cart.testcases.TC0002_LoginTest@176d53b2]" name="setUp" is-config="true" duration-ms="8886" started-at="2024-12-31T22:14:41 IST" finished-at="2024-12-31T22:14:50 IST">
           <params>
             <param index="0">
               <value>
@@ -18,18 +18,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.cart.testcases.TC0002_LoginTest@1ffe63b9]" name="setUp" is-config="true" duration-ms="7" started-at="2024-12-31T13:09:40 IST" finished-at="2024-12-31T13:09:40 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.cart.testcases.TC0002_LoginTest.doLoginInCart(java.lang.String,java.lang.String) throws com.inetbanking.utilities.MyException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="doLoginInCart(java.lang.String, java.lang.String)[pri:0, instance:com.cart.testcases.TC0002_LoginTest@1ffe63b9]" name="doLoginInCart" duration-ms="3967" started-at="2024-12-31T13:09:40 IST" data-provider="LoginData" finished-at="2024-12-31T13:09:44 IST">
+        <test-method status="PASS" signature="doLoginInCart(java.lang.String, java.lang.String)[pri:0, instance:com.cart.testcases.TC0002_LoginTest@176d53b2]" name="doLoginInCart" duration-ms="4409" started-at="2024-12-31T22:14:51 IST" data-provider="LoginData" finished-at="2024-12-31T22:14:55 IST">
           <params>
             <param index="0">
               <value>
@@ -45,7 +34,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- doLoginInCart -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.cart.testcases.TC0002_LoginTest@1ffe63b9]" name="tearDown" is-config="true" duration-ms="1" started-at="2024-12-31T13:09:44 IST" finished-at="2024-12-31T13:09:44 IST">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.cart.testcases.TC0002_LoginTest@176d53b2]" name="tearDown" is-config="true" duration-ms="1" started-at="2024-12-31T22:14:55 IST" finished-at="2024-12-31T22:14:55 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
