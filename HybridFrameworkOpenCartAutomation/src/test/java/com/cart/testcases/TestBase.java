@@ -1,6 +1,7 @@
-package com.inetbanking.testcases;
+package com.cart.testcases;
 
 import java.io.IOException;
+import java.lang.reflect.Method;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.lang3.RandomStringUtils;
@@ -18,6 +19,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.asserts.SoftAssert;
@@ -35,12 +37,10 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class TestBase {
 	
-	ReadConfig readconfig=new ReadConfig();
-	
 	public static WebDriver driver;
-	public String userName=readconfig.getUserNAme();
-	public String passWord=readconfig.getPassword();
-	public String baseUrl=readconfig.getApplicationURL();
+	public String userName=ReadConfig.getPropertyValue("userName");
+	public String passWord=ReadConfig.getPropertyValue("passWord");
+	public String baseUrl=ReadConfig.getPropertyValue("baseUrl");
 	public static Logger log;
 	public dataProvider db;
 	public String sheetName="NEW CUSTOMER";
@@ -139,6 +139,12 @@ public class TestBase {
 	public ExtentTest getExtentTest()
 	{
 		return extentTestThread.get();
+	}
+	
+	@BeforeMethod
+	public void setUp(Method method)
+	{
+		setExtentTest(extentReport.createTest(method.getName()));
 	}
 	
 	

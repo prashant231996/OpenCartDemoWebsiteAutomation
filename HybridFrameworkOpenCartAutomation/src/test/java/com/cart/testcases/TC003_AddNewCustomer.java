@@ -1,4 +1,4 @@
-package com.inetbanking.testcases;
+package com.cart.testcases;
 
 import java.util.Map;
 

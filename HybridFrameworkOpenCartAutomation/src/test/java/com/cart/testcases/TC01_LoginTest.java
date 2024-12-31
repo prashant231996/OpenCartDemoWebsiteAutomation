@@ -1,4 +1,4 @@
-package com.inetbanking.testcases;
+package com.cart.testcases;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

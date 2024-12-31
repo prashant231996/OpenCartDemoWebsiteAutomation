@@ -13,8 +13,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.cart.testcases.TestBase;
 import com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutor;
-import com.inetbanking.testcases.TestBase;
 import com.inetbanking.utilities.MyException;
 
 
@@ -330,6 +330,15 @@ public class BasePage extends TestBase{
 				   js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
 			} catch (Exception e) {
 				// TODO: handle exception
+				e.printStackTrace();
+			}
+		}
+		
+		public void dynamicDropdown()
+		{
+			try {
+				
+			} catch (Exception e) {
 				e.printStackTrace();
 			}
 		}

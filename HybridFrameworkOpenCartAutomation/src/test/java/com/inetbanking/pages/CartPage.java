@@ -27,6 +27,31 @@ public class CartPage extends BasePage implements CartPageObjects{
 		}
 	}
 	
+	public void fillCustomerDetails(String name, String lName, String country, String address, String cityName, String stateName, String emailId)
+	{
+		try {
+			waitTillElementVisible(firstName);
+			type(firstName, name);
+			waitTillElementVisible(lastName);
+			type(lastName, lName);
+			waitTillElementVisible(countryDropDoen);
+			selectByValue(countryDropDoen, country);
+			waitTillElementVisible(Address);
+			type(Address, address);
+			waitTillElementVisible(city);
+			type(city, cityName);
+			waitTillElementVisible(city);
+			type(city, cityName);
+			waitTillElementVisible(city);
+			type(city, cityName);
+			
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+	}
+	
 	public void placeOrder()
 	{
 		try {

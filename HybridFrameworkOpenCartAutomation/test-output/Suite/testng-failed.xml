@@ -7,13 +7,13 @@
   </listeners>
   <test thread-count="5" name="E-Banking Test(failed)">
     <classes>
-      <class name="com.inetbanking.testcases.TC0003_AddToCartTest">
+      <class name="com.inetbanking.testcases.TC0001_RegistrationTest">
         <methods>
-          <include name="addToCartTest" invocation-numbers="0"/>
           <include name="tearDown"/>
           <include name="setUp"/>
+          <include name="TC0001_RegistrationTestCase" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.inetbanking.testcases.TC0003_AddToCartTest -->
+      </class> <!-- com.inetbanking.testcases.TC0001_RegistrationTest -->
     </classes>
   </test> <!-- E-Banking Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

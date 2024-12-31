@@ -10,7 +10,7 @@ import org.testng.ITestResult;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-import com.inetbanking.testcases.TestBase;
+import com.cart.testcases.TestBase;
 import com.inetbanking.utilities.ExtentReporter;
 import com.inetbanking.utilities.ScreenShot;
 

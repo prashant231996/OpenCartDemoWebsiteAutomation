@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="1" total="4" passed="3">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="24791" started-at="2023-05-09T22:28:23 IST" finished-at="2023-05-09T22:28:47 IST">
+  <suite name="Suite" duration-ms="14350" started-at="2024-12-31T13:09:30 IST" finished-at="2024-12-31T13:09:44 IST">
     <groups>
     </groups>
-    <test name="E-Banking Test" duration-ms="24791" started-at="2023-05-09T22:28:23 IST" finished-at="2023-05-09T22:28:47 IST">
-      <class name="com.inetbanking.testcases.TC0002_LoginTest">
-        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.inetbanking.testcases.TC0002_LoginTest@51e5fc98]" name="setUp" is-config="true" duration-ms="6969" started-at="2023-05-09T22:28:23 IST" finished-at="2023-05-09T22:28:30 IST">
+    <test name="E-Banking Test" duration-ms="14350" started-at="2024-12-31T13:09:30 IST" finished-at="2024-12-31T13:09:44 IST">
+      <class name="com.cart.testcases.TC0002_LoginTest">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.cart.testcases.TC0002_LoginTest@1ffe63b9]" name="setUp" is-config="true" duration-ms="9351" started-at="2024-12-31T13:09:30 IST" finished-at="2024-12-31T13:09:39 IST">
           <params>
             <param index="0">
               <value>
@@ -18,7 +18,18 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="doLoginInCart(java.lang.String, java.lang.String)[pri:0, instance:com.inetbanking.testcases.TC0002_LoginTest@51e5fc98]" name="doLoginInCart" duration-ms="3169" started-at="2023-05-09T22:28:31 IST" data-provider="LoginData" finished-at="2023-05-09T22:28:34 IST">
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.cart.testcases.TC0002_LoginTest@1ffe63b9]" name="setUp" is-config="true" duration-ms="7" started-at="2024-12-31T13:09:40 IST" finished-at="2024-12-31T13:09:40 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.cart.testcases.TC0002_LoginTest.doLoginInCart(java.lang.String,java.lang.String) throws com.inetbanking.utilities.MyException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="doLoginInCart(java.lang.String, java.lang.String)[pri:0, instance:com.cart.testcases.TC0002_LoginTest@1ffe63b9]" name="doLoginInCart" duration-ms="3967" started-at="2024-12-31T13:09:40 IST" data-provider="LoginData" finished-at="2024-12-31T13:09:44 IST">
           <params>
             <param index="0">
               <value>
@@ -34,37 +45,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- doLoginInCart -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.inetbanking.testcases.TC0002_LoginTest@51e5fc98]" name="tearDown" is-config="true" duration-ms="0" started-at="2023-05-09T22:28:34 IST" finished-at="2023-05-09T22:28:34 IST">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.cart.testcases.TC0002_LoginTest@1ffe63b9]" name="tearDown" is-config="true" duration-ms="1" started-at="2024-12-31T13:09:44 IST" finished-at="2024-12-31T13:09:44 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.inetbanking.testcases.TC0002_LoginTest -->
-      <class name="com.inetbanking.testcases.TC0003_AddToCartTest">
-        <test-method status="PASS" signature="addToCartTest(java.lang.String, java.lang.String)[pri:0, instance:com.inetbanking.testcases.TC0003_AddToCartTest@7c469c48]" name="addToCartTest" duration-ms="11021" started-at="2023-05-09T22:28:34 IST" data-provider="getProductDetails" finished-at="2023-05-09T22:28:45 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[jeans]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Sort by popularity]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addToCartTest -->
-        <test-method status="PASS" signature="purchaceProductTest()[pri:0, instance:com.inetbanking.testcases.TC0003_AddToCartTest@7c469c48]" name="purchaceProductTest" duration-ms="2518" started-at="2023-05-09T22:28:45 IST" finished-at="2023-05-09T22:28:47 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- purchaceProductTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.inetbanking.testcases.TC0003_AddToCartTest@7c469c48]" name="tearDown" is-config="true" duration-ms="0" started-at="2023-05-09T22:28:47 IST" finished-at="2023-05-09T22:28:47 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.inetbanking.testcases.TC0003_AddToCartTest -->
+      </class> <!-- com.cart.testcases.TC0002_LoginTest -->
     </test> <!-- E-Banking Test -->
   </suite> <!-- Suite -->
 </testng-results>

@@ -12,7 +12,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import com.inetbanking.testcases.TestBase;
+import com.cart.testcases.TestBase;
 
 public class MapWIthDataProvider extends TestBase{
 	

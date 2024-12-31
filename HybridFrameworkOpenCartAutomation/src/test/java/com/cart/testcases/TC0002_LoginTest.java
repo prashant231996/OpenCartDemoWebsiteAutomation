@@ -1,4 +1,4 @@
-package com.inetbanking.testcases;
+package com.cart.testcases;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -8,22 +8,24 @@ import java.io.IOException;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.inetbanking.pages.LoginPageNew;
 import com.inetbanking.utilities.MyException;
+import com.inetbanking.utilities.ReadConfig;
 
-import junit.framework.Assert;
 
 public class TC0002_LoginTest extends TestBase{
+	
 
 	
-	@Test(dataProvider = "LoginData",dataProviderClass = com.inetbanking.testcases.TC0002_LoginTest.class)
+	@Test(dataProvider = "LoginData",dataProviderClass = com.cart.testcases.TC0002_LoginTest.class)
 	public void doLoginInCart(String userName, String password) throws MyException
 	{
 		LoginPageNew lp=new LoginPageNew(driver);
-		lp.doLogin(userName, password);
+		lp.doLogin(ReadConfig.getPropertyValue("userName"), ReadConfig.getPropertyValue("passWord"));
 		Assert.assertEquals("TestName",lp.loginSuccessfullData() );
 	}
 	

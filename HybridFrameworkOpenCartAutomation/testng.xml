@@ -7,11 +7,11 @@
   <parameter name="browser" value="chrome"></parameter>
   <test  name="E-Banking Test">
     <classes>
-  <!--  <class name="com.inetbanking.testcases.TC0001_RegistrationTest"/>-->
-    <class name="com.inetbanking.testcases.TC0002_LoginTest"></class>
+  <!-- <class name="com.opencart.testcases.TC0001_RegistrationTest"/>-->
+   <class name="com.cart.testcases.TC0002_LoginTest"></class>
     <!-- <class name="com.inetbanking.testcases.TC02_LoginTestDDT"/>-->
    <!-- <class name="com.inetbanking.testcases.TC003_AddNewCustomer"/>-->
-     <class name="com.inetbanking.testcases.TC0003_AddToCartTest"/>
+    <!-- <class name="com.inetbanking.testcases.TC0003_AddToCartTest"/>-->
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

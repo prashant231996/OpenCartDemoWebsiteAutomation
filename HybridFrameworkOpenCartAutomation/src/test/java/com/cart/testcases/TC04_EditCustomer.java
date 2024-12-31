@@ -1,4 +1,4 @@
-package com.inetbanking.testcases;
+package com.cart.testcases;
 
 import org.testng.annotations.Test;
 

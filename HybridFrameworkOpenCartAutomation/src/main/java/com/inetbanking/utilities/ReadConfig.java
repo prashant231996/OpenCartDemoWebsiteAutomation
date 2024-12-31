@@ -8,9 +8,9 @@ import java.util.Properties;
 
 public class ReadConfig {
 	
-	Properties prop;
+	private static Properties prop;
 	
-	public ReadConfig() 
+	private ReadConfig() 
 	{
 		File src=new File("./Configuration/config.properties");
 		
@@ -25,7 +25,15 @@ public class ReadConfig {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+	}
+	
+	public static String getPropertyValue(String key)
+	{
+		if(prop==null)
+		{
+			new ReadConfig();
+		}
+		return prop.getProperty(key);
 	}
 	
 	public String getApplicationURL()
