@@ -2,8 +2,8 @@ package com.cart.testcases;
 
 import org.testng.annotations.Test;
 
-import com.inetbanking.pages.EditCustomerPage;
-import com.inetbanking.pages.LoginPage;
+import com.cart.pages.EditCustomerPage;
+import com.cart.pages.LoginPage;
 
 public class TC04_EditCustomer extends TestBase{
 	

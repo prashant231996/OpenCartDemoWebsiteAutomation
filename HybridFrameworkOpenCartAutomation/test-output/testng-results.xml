@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="14354" started-at="2024-12-31T22:14:41 IST" finished-at="2024-12-31T22:14:55 IST">
+  <suite name="Suite" duration-ms="24137" started-at="2025-01-01T23:10:17 IST" finished-at="2025-01-01T23:10:41 IST">
     <groups>
     </groups>
-    <test name="E-Banking Test" duration-ms="14354" started-at="2024-12-31T22:14:41 IST" finished-at="2024-12-31T22:14:55 IST">
-      <class name="com.cart.testcases.TC0002_LoginTest">
-        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.cart.testcases.TC0002_LoginTest@176d53b2]" name="setUp" is-config="true" duration-ms="8886" started-at="2024-12-31T22:14:41 IST" finished-at="2024-12-31T22:14:50 IST">
+    <test name="Store Page test cases" duration-ms="24137" started-at="2025-01-01T23:10:17 IST" finished-at="2025-01-01T23:10:41 IST">
+      <class name="com.cart.testcases.storePageTests.StorePageTests">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.cart.testcases.storePageTests.StorePageTests@4d339552]" name="setUp" is-config="true" duration-ms="8653" started-at="2025-01-01T23:10:17 IST" finished-at="2025-01-01T23:10:25 IST">
           <params>
             <param index="0">
               <value>
@@ -18,27 +18,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="doLoginInCart(java.lang.String, java.lang.String)[pri:0, instance:com.cart.testcases.TC0002_LoginTest@176d53b2]" name="doLoginInCart" duration-ms="4409" started-at="2024-12-31T22:14:51 IST" data-provider="LoginData" finished-at="2024-12-31T22:14:55 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[TestName]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[test]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="PASS" signature="TC001_add3LowestPriceItemsToCartWith()[pri:0, instance:com.cart.testcases.storePageTests.StorePageTests@4d339552]" name="TC001_add3LowestPriceItemsToCartWith" duration-ms="15398" started-at="2025-01-01T23:10:25 IST" description="GEt products count from store page" finished-at="2025-01-01T23:10:41 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- doLoginInCart -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.cart.testcases.TC0002_LoginTest@176d53b2]" name="tearDown" is-config="true" duration-ms="1" started-at="2024-12-31T22:14:55 IST" finished-at="2024-12-31T22:14:55 IST">
+        </test-method> <!-- TC001_add3LowestPriceItemsToCartWith -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.cart.testcases.storePageTests.StorePageTests@4d339552]" name="tearDown" is-config="true" duration-ms="1" started-at="2025-01-01T23:10:41 IST" finished-at="2025-01-01T23:10:41 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.cart.testcases.TC0002_LoginTest -->
-    </test> <!-- E-Banking Test -->
+      </class> <!-- com.cart.testcases.storePageTests.StorePageTests -->
+    </test> <!-- Store Page test cases -->
   </suite> <!-- Suite -->
 </testng-results>

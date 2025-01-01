@@ -18,6 +18,22 @@ public interface StorePageObjects {
 	
 	By viewCartMenu=By.xpath("(//a[@title='View your shopping cart'])[1]");
 	
+	By pageNumbers=By.xpath("//ul[@class='page-numbers']//li");
+	
+	By productsList=By.xpath("//ul[contains(@class,'products')]//li");
+	
+	By storeTitle=By.xpath("//*[contains(@class,'page-title')]");
+	
+	By addToCartLink=By.xpath("//a[contains(text(),'cart')]");
+	
+	By prevPageNumber=By.xpath("//a[@class='prev page-numbers']");
+	
+	By resultProductCount=By.xpath("//*[contains(@class,'result-count')]");
+	
+	
+	
+	
+	
 	
 
 }

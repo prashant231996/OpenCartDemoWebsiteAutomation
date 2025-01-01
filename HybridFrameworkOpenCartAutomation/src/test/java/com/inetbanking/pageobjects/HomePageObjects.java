@@ -9,5 +9,9 @@ public interface HomePageObjects {
 	By accountLink=By.linkText("Account");
 	
 	By logOutBtn=By.linkText("Log out");
+	
+	By shopNowLink=By.xpath("//div[@class='wp-block-button']//a[text()='Shop Now']");
+	
+	
 
 }

@@ -1,4 +1,4 @@
-package com.inetbanking.pages;
+package com.cart.pages;
 
 import java.util.List;
 

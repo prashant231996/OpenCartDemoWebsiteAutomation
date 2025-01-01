@@ -54,7 +54,6 @@ public class Listner extends TestBase implements ITestListener{
 	}
 
 	public void onFinish(ITestContext context) {
-		//driver.quit();
 		extentReport.flush();
 	}
 

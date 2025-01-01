@@ -1,8 +1,18 @@
-package com.inetbanking.pages;
+package com.cart.pages;
+
+import org.openqa.selenium.WebDriver;
 
 import com.inetbanking.pageobjects.HomePageObjects;
+import com.inetbanking.utilities.MyException;
 
 public class HomePage extends BasePage implements HomePageObjects{
+	
+	WebDriver driver;
+	
+	public HomePage(WebDriver driver)
+	{
+		this.driver=driver;
+	}
 	
 	public void logOutFromApplication()
 	{
@@ -15,6 +25,14 @@ public class HomePage extends BasePage implements HomePageObjects{
 			// TODO: handle exception
 			e.printStackTrace();
 		}
+	}
+	
+	public StorePage ClickOnShopNowLink() throws MyException
+	{
+		waitTillElementClickable(shopNowLink);
+		clickOn(shopNowLink);
+		return new StorePage(this.driver);
+	
 	}
 
 }

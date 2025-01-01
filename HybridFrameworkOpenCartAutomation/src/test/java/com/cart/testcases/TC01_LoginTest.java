@@ -5,7 +5,7 @@ import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.inetbanking.pages.LoginPage;
+import com.cart.pages.LoginPage;
 
 
 

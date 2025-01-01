@@ -3,7 +3,7 @@ package com.cart.testcases;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.inetbanking.pages.LoginPage;
+import com.cart.pages.LoginPage;
 
 public class TC02_LoginTestDDT extends TestBase{
 	

@@ -26,9 +26,14 @@ import org.testng.asserts.SoftAssert;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.cart.pages.CartPage;
+import com.cart.pages.HomePage;
+import com.cart.pages.LoginPage;
+import com.cart.pages.LoginPageNew;
+import com.cart.pages.RegistrationPage;
+import com.cart.pages.StorePage;
 import com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutor;
 import com.inetbanking.dataprovider.dataProvider;
-import com.inetbanking.pages.RegistrationPage;
 import com.inetbanking.utilities.ExtentReporter;
 import com.inetbanking.utilities.MyException;
 import com.inetbanking.utilities.ReadConfig;
@@ -46,11 +51,17 @@ public class TestBase {
 	public String sheetName="NEW CUSTOMER";
 	//public WebDriverWait myWait;
 	//public JavaScriptExecutor js;
-	public static RegistrationPage registrationPage;
 	
 	protected static ExtentReports extentReport=new ExtentReports();
 	protected static ExtentTest extentTest;
 	protected static ThreadLocal<ExtentTest>extentTestThread=new ThreadLocal<ExtentTest>();
+	
+	//Pages object
+	protected static RegistrationPage registrationPage;
+	protected static LoginPageNew loginPage;
+	protected static HomePage homePage;
+	protected static StorePage storePage;
+	
 	
 	SoftAssert softassert=new SoftAssert();
 	
@@ -59,12 +70,6 @@ public class TestBase {
 	public void setUp(String br)
 	{
 		log=LogManager.getLogger(TestBase.class);
-		/*try {
-			db.createWorkBook();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}*/
 		if(br.equalsIgnoreCase("chrome"))
 		{
 			WebDriverManager.chromedriver().setup();
@@ -86,6 +91,8 @@ public class TestBase {
 		//js=(JavaScriptExecutor)driver;
 		extentReport=ExtentReporter.getExtentReports();
 		driver.get(baseUrl);
+		registrationPage=new RegistrationPage(driver);
+		loginPage=new LoginPageNew(driver);
 	}
 	
 	@AfterClass

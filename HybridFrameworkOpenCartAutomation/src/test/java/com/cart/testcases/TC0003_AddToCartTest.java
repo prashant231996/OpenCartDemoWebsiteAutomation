@@ -13,9 +13,9 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import com.inetbanking.pages.CartPage;
-import com.inetbanking.pages.LoginPageNew;
-import com.inetbanking.pages.StorePage;
+import com.cart.pages.CartPage;
+import com.cart.pages.LoginPageNew;
+import com.cart.pages.StorePage;
 import com.inetbanking.utilities.MyException;
 
 import junit.framework.Assert;

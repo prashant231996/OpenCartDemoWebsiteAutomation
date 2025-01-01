@@ -5,15 +5,15 @@
   <listeners>
     <listener class-name="listner.Listner"/>
   </listeners>
-  <test thread-count="5" name="E-Banking Test(failed)">
+  <test thread-count="5" name="Add To Cart Test Cases(failed)">
     <classes>
-      <class name="com.inetbanking.testcases.TC0001_RegistrationTest">
+      <class name="com.cart.testcases.cartTestCases.AddToCartTests">
         <methods>
           <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="TC0001_RegistrationTestCase" invocation-numbers="0"/>
+          <include name="TC001_add3LowestPriceItemsToCartWith"/>
         </methods>
-      </class> <!-- com.inetbanking.testcases.TC0001_RegistrationTest -->
+      </class> <!-- com.cart.testcases.cartTestCases.AddToCartTests -->
     </classes>
-  </test> <!-- E-Banking Test(failed) -->
+  </test> <!-- Add To Cart Test Cases(failed) -->
 </suite> <!-- Failed suite [Suite] -->

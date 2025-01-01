@@ -12,7 +12,7 @@ import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import com.inetbanking.pages.LoginPageNew;
+import com.cart.pages.LoginPageNew;
 import com.inetbanking.utilities.MyException;
 import com.inetbanking.utilities.ReadConfig;
 

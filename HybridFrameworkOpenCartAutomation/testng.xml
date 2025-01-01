@@ -5,13 +5,27 @@
 <listener class-name="listner.Listner"></listener>
 </listeners>
   <parameter name="browser" value="chrome"></parameter>
-  <test  name="E-Banking Test">
-    <classes>
+  <!--  <test  name="E-Banking Test">
+    <classes>-->
   <!-- <class name="com.opencart.testcases.TC0001_RegistrationTest"/>-->
-   <class name="com.cart.testcases.TC0002_LoginTest"></class>
+   <!-- <class name="com.cart.testcases.TC0002_LoginTest"></class>-->
     <!-- <class name="com.inetbanking.testcases.TC02_LoginTestDDT"/>-->
    <!-- <class name="com.inetbanking.testcases.TC003_AddNewCustomer"/>-->
     <!-- <class name="com.inetbanking.testcases.TC0003_AddToCartTest"/>-->
+   <!--  </classes>-->
+ <!--  </test>  -->
+  
+  <!-- <test name="Add To Cart Test Cases">
+      <classes>
+         <class name="com.cart.testcases.cartTestCases.AddToCartTests"/>
+      </classes>
+  </test>-->
+  
+  <test name="Store Page test cases">
+    <classes>
+    
+      <class name="com.cart.testcases.storePageTests.StorePageTests"/>
+    
     </classes>
-  </test> <!-- Test -->
+   </test> 
 </suite> <!-- Suite -->

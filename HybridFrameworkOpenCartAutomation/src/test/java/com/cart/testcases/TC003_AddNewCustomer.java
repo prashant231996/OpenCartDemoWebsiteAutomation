@@ -5,8 +5,8 @@ import java.util.Map;
 import org.junit.Assert;
 import org.testng.annotations.Test;
 
-import com.inetbanking.pages.AddCustomerPage;
-import com.inetbanking.pages.LoginPage;
+import com.cart.pages.AddCustomerPage;
+import com.cart.pages.LoginPage;
 
 public class TC003_AddNewCustomer extends TestBase{
 

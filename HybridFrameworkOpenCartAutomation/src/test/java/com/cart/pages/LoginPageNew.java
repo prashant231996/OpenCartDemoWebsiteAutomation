@@ -1,4 +1,4 @@
-package com.inetbanking.pages;
+package com.cart.pages;
 
 import org.openqa.selenium.WebDriver;
 
@@ -7,15 +7,15 @@ import com.inetbanking.utilities.MyException;
 
 public class LoginPageNew extends BasePage implements LoginPageObjects{
 	
-	WebDriver lDriver;
+	WebDriver driver;
 	
-	public LoginPageNew(WebDriver rDriver)
+	public LoginPageNew(WebDriver driver)
 	{
-		lDriver=rDriver;
+		this.driver=driver;
 	}
 	
 	
-	public void doLogin(String userName, String pwd) throws MyException
+	public HomePage doLogin(String userName, String pwd) throws MyException
 	{
 		waitTillElementVisible(accountBtn);
 		clickOn(accountBtn);
@@ -25,6 +25,7 @@ public class LoginPageNew extends BasePage implements LoginPageObjects{
 		type(passWordField, pwd);
 		waitTillElementVisible(userNameField);
 		clickOn(loginBtn);
+		return new HomePage(this.driver);
 	}
 	
 	public String loginSuccessfullData() throws MyException
