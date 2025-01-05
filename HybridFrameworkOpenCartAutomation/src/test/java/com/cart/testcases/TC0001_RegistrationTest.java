@@ -6,6 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.Status;
+import com.cart.base.TestBase;
 import com.cart.pages.RegistrationPage;
 import com.inetbanking.utilities.MyException;
 import com.inetbanking.utilities.ReadConfig;

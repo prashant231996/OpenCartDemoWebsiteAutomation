@@ -1,4 +1,4 @@
-package com.cart.testcases;
+package com.cart.base;
 
 import java.io.IOException;
 import java.lang.reflect.Method;
@@ -28,8 +28,8 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.cart.pages.CartPage;
 import com.cart.pages.HomePage;
+import com.cart.pages.LoginPageU;
 import com.cart.pages.LoginPage;
-import com.cart.pages.LoginPageNew;
 import com.cart.pages.RegistrationPage;
 import com.cart.pages.StorePage;
 import com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutor;
@@ -42,7 +42,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class TestBase {
 	
-	public static WebDriver driver;
+	public WebDriver driver;
 	public String userName=ReadConfig.getPropertyValue("userName");
 	public String passWord=ReadConfig.getPropertyValue("passWord");
 	public String baseUrl=ReadConfig.getPropertyValue("baseUrl");
@@ -55,12 +55,14 @@ public class TestBase {
 	protected static ExtentReports extentReport=new ExtentReports();
 	protected static ExtentTest extentTest;
 	protected static ThreadLocal<ExtentTest>extentTestThread=new ThreadLocal<ExtentTest>();
+	protected static ThreadLocal<WebDriver>driverThread=new ThreadLocal<WebDriver>();
 	
 	//Pages object
 	protected static RegistrationPage registrationPage;
-	protected static LoginPageNew loginPage;
+	protected static LoginPage loginPage;
 	protected static HomePage homePage;
 	protected static StorePage storePage;
+	public WebDriverWait wait;
 	
 	
 	SoftAssert softassert=new SoftAssert();
@@ -90,9 +92,7 @@ public class TestBase {
 		//myWait=new WebDriverWait(driver, 10);
 		//js=(JavaScriptExecutor)driver;
 		extentReport=ExtentReporter.getExtentReports();
-		driver.get(baseUrl);
-		registrationPage=new RegistrationPage(driver);
-		loginPage=new LoginPageNew(driver);
+		driverThread.set(driver);
 	}
 	
 	@AfterClass
@@ -148,6 +148,15 @@ public class TestBase {
 		return extentTestThread.get();
 	}
 	
+	public WebDriver getTreadDriver()
+	{
+		return driverThread.get();
+	}
+	
+	public void setThreadDriver(WebDriver driver)
+	{
+		driverThread.set(driver);
+	}
 	
 
 	

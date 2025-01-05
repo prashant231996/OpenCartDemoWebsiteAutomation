@@ -1,5 +1,8 @@
 package com.cart.pages;
 
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.List;
 
 import org.apache.commons.lang3.RandomStringUtils;
@@ -13,18 +16,24 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.cart.testcases.TestBase;
+import com.cart.base.TestBase;
 import com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutor;
 import com.inetbanking.utilities.MyException;
 
 
-public class BasePage extends TestBase{
+public class BasePage{
 	
-	public WebDriverWait myWait=new WebDriverWait(driver, 10);
+	public WebDriver driver;
+	public WebDriverWait wait;
 	
 	@FindBy(xpath="//a[text()='Log out']")
 	WebElement logOutLink;
 	
+	public BasePage(WebDriver driver)
+	{
+		this.driver=driver;
+		wait=new WebDriverWait(driver,10);
+	}
 	
 	public void logOutLink()
 	{
@@ -237,7 +246,7 @@ public class BasePage extends TestBase{
 		public void waitTillElementVisible(By ele) throws MyException
 		{
 			try {
-				myWait.until(ExpectedConditions.visibilityOfElementLocated(ele));
+				wait.until(ExpectedConditions.visibilityOfElementLocated(ele));
 			} catch (Exception e) {
 				// TODO: handle exception
 				e.printStackTrace();
@@ -248,7 +257,7 @@ public class BasePage extends TestBase{
 		public void waitTillWebLementVisible(WebElement element) throws MyException
 		{
 			try {
-				myWait.until(ExpectedConditions.visibilityOf(element));
+				wait.until(ExpectedConditions.visibilityOf(element));
 			} catch (Exception e) {
 				e.printStackTrace();
 				throw new MyException("Faile to visible the element");
@@ -259,7 +268,7 @@ public class BasePage extends TestBase{
 		{
 			try {
 				WebElement element=identify(ele);
-				myWait.until(ExpectedConditions.elementToBeClickable(element));
+				wait.until(ExpectedConditions.elementToBeClickable(element));
 			} catch (Exception e) {
 				// TODO: handle exception
 				e.printStackTrace();
@@ -341,6 +350,36 @@ public class BasePage extends TestBase{
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
+		}
+		
+		//Validate Broken Links on page
+		public boolean validateBrokenLinks(List<WebElement>linksList) throws IOException
+		{
+			HttpURLConnection conn=null;
+			try
+			{
+			for(WebElement link:linksList)
+			{
+				String hrefAttr=link.getAttribute("href");
+				URL linkurl=new URL(hrefAttr);
+				conn=(HttpURLConnection)linkurl.openConnection();
+				conn.connect();
+				if(conn.getResponseCode()!=200)
+				{
+					return false;
+				}
+			}
+			}
+			catch(Exception e)
+			{
+				e.printStackTrace();
+				return false;
+			}
+			finally
+			{
+				conn.disconnect();
+			}
+			return true;
 		}
 
 }

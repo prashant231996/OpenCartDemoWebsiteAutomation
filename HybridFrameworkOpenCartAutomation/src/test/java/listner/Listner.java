@@ -10,7 +10,7 @@ import org.testng.ITestResult;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-import com.cart.testcases.TestBase;
+import com.cart.base.TestBase;
 import com.inetbanking.utilities.ExtentReporter;
 import com.inetbanking.utilities.ScreenShot;
 
@@ -28,7 +28,7 @@ public class Listner extends TestBase implements ITestListener{
 	public void onTestFailure(ITestResult testResult) {
 		extentTestThread.get().fail(testResult.getThrowable());
 		extentTestThread.get().log(Status.FAIL, testResult.getName()+"Test Case got failed");
-	    String screenShotFilePath=ScreenShot.getScreenShot(driver,testResult.getName());
+	    String screenShotFilePath=ScreenShot.getScreenShot(getTreadDriver(),testResult.getName());
 	    try {
 			getExtentTest().addScreenCaptureFromPath(screenShotFilePath);
 		} catch (IOException e) {

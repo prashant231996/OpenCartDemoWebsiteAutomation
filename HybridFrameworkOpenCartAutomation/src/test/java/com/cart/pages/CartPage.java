@@ -6,11 +6,12 @@ import com.inetbanking.pageobjects.CartPageObjects;
 import com.inetbanking.utilities.MyException;
 
 public class CartPage extends BasePage implements CartPageObjects{
-	WebDriver lDriver;
+	WebDriver driver;
 
-	public CartPage(WebDriver rDriver)
+	public CartPage(WebDriver driver)
 	{
-		lDriver=rDriver;
+		super(driver);
+		this.driver=driver;
 	}
 
 	public void proceedToCheckout() throws MyException

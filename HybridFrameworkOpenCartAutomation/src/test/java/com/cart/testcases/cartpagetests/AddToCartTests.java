@@ -1,4 +1,4 @@
-package com.cart.testcases.cartTestCases;
+package com.cart.testcases.cartpagetests;
 
 import java.util.List;
 
@@ -6,9 +6,9 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.cart.base.TestBase;
 import com.cart.pages.HomePage;
-import com.cart.pages.LoginPageNew;
-import com.cart.testcases.TestBase;
+import com.cart.pages.LoginPage;
 import com.inetbanking.utilities.MyException;
 import com.inetbanking.utilities.ReadConfig;
 

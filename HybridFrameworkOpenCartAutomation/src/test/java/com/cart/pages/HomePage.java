@@ -11,6 +11,7 @@ public class HomePage extends BasePage implements HomePageObjects{
 	
 	public HomePage(WebDriver driver)
 	{
+		super(driver);
 		this.driver=driver;
 	}
 	

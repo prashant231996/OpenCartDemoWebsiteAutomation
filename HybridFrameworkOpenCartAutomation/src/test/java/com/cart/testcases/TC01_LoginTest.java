@@ -5,18 +5,19 @@ import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.cart.pages.LoginPage;
+import com.cart.base.TestBase;
+import com.cart.pages.LoginPageU;
 
 
 
 public class TC01_LoginTest extends TestBase{
 	
-	public LoginPage lp;
+	public LoginPageU lp;
 	
-	@Test
+	@Test(priority=2,description="Verify login functionality with valid username and password")
 	public void loginTest()
 	{
-		lp=new LoginPage(driver);
+		lp=new LoginPageU(driver);
 		lp.doLogin(userName, passWord);
 		//lp.doLogin(username, pwd);
 		log.info("Log into the application...");

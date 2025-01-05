@@ -5,18 +5,19 @@ import java.util.Map;
 import org.junit.Assert;
 import org.testng.annotations.Test;
 
+import com.cart.base.TestBase;
 import com.cart.pages.AddCustomerPage;
-import com.cart.pages.LoginPage;
+import com.cart.pages.LoginPageU;
 
 public class TC003_AddNewCustomer extends TestBase{
 
-	public LoginPage lp;
+	public LoginPageU lp;
 	public AddCustomerPage acp;
 	
 	@Test(dataProvider = "testData", dataProviderClass = com.inetbanking.dataprovider.MapWIthDataProvider.class)
 	public void addNewCustomer(Map<String,String> dataMap) throws InterruptedException
 	{
-		lp=new LoginPage(driver);
+		lp=new LoginPageU(driver);
 		lp.doLogin(userName, passWord);
 		//lp.doLogin(userrName, pwd);
 		Thread.sleep(5000);

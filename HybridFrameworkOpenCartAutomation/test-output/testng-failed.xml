@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="listner.Listner"/>
+  </listeners>
+  <test thread-count="5" name="E-Cart Login Test(failed)">
+    <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.cart.testcases.storePageTests.StorePageTests">
+      <class name="com.cart.testcases.logintests.TC0002_LoginTest">
         <methods>
-          <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="TC001_add3LowestPriceItemsToCartWith"/>
+          <include name="tearDown"/>
+          <include name="validateLinksPresentonLoginPage"/>
         </methods>
-      </class> <!-- com.cart.testcases.storePageTests.StorePageTests -->
+      </class> <!-- com.cart.testcases.logintests.TC0002_LoginTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- E-Cart Login Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

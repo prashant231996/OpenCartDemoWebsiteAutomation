@@ -7,11 +7,12 @@ import com.inetbanking.utilities.MyException;
 
 public class RegistrationPage extends BasePage implements RegistrationPageObjects{
 	
-	WebDriver ldriver;
-
+    WebDriver driver;
+	
 	public RegistrationPage(WebDriver driver)
 	{
-		ldriver=driver;
+		super(driver);
+		this.driver=driver;
 	}
 	
 //	public void gotTORegistrationPage() throws MyException

@@ -4,7 +4,12 @@
 <listeners>
 <listener class-name="listner.Listner"></listener>
 </listeners>
-  <parameter name="browser" value="chrome"></parameter>
+  <test name="E-Cart Login Test">
+   <parameter name="browser" value="chrome"></parameter>
+     <classes>
+        <class name="com.cart.testcases.logintests.TC0002_LoginTest"/>
+     </classes>
+  </test>
   <!--  <test  name="E-Banking Test">
     <classes>-->
   <!-- <class name="com.opencart.testcases.TC0001_RegistrationTest"/>-->
@@ -21,11 +26,9 @@
       </classes>
   </test>-->
   
-  <test name="Store Page test cases">
+  <!--<test name="Store Page test cases">
     <classes>
-    
       <class name="com.cart.testcases.storePageTests.StorePageTests"/>
-    
     </classes>
-   </test> 
+   </test> -->
 </suite> <!-- Suite -->

@@ -13,8 +13,9 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import com.cart.base.TestBase;
 import com.cart.pages.CartPage;
-import com.cart.pages.LoginPageNew;
+import com.cart.pages.LoginPage;
 import com.cart.pages.StorePage;
 import com.inetbanking.utilities.MyException;
 

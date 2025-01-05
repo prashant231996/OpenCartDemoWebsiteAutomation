@@ -15,11 +15,12 @@ import junit.framework.Assert;
 
 public class StorePage extends BasePage implements StorePageObjects{
 	
-	WebDriver lDriver;
+	WebDriver driver;
 	
-	public StorePage(WebDriver rDriver)
+	public StorePage(WebDriver driver)
 	{
-		this.lDriver=rDriver;
+		super(driver);
+		this.driver=driver;
 	}
 	
 	public void searchProduct(String productName) throws MyException

@@ -7,12 +7,13 @@ import org.openqa.selenium.support.PageFactory;
 
 public class AddCustomerPage extends BasePage{
 	
-	WebDriver lDriver;
+	WebDriver driver;
 	
-	public AddCustomerPage(WebDriver rDriver)
+	public AddCustomerPage(WebDriver driver)
 	{
-		lDriver=rDriver;
-		PageFactory.initElements(rDriver, this);
+		super(driver);
+		this.driver=driver;
+		PageFactory.initElements(driver, this);
 	}
 	
 	@FindBy(xpath="//a[text()='New Customer']")
