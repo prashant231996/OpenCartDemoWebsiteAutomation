@@ -12,6 +12,9 @@ public interface HomePageObjects {
 	
 	By shopNowLink=By.xpath("//div[@class='wp-block-button']//a[text()='Shop Now']");
 	
+	By accessoriesLink=By.xpath("//a[text()='Accessories']");
+	
+	
 	
 
 }

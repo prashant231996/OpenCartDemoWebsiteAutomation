@@ -35,5 +35,13 @@ public class HomePage extends BasePage implements HomePageObjects{
 		return new StorePage(this.driver);
 	
 	}
+	
+	public AccesoriesPage goToAccesoriesPage() throws MyException
+	{
+		waitTillElementVisible(accessoriesLink);
+		clickOn(accessoriesLink);
+		return new AccesoriesPage(driver);
+	}
+	
 
 }

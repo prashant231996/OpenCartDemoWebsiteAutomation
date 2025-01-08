@@ -5,11 +5,11 @@ import java.util.Map;
 import org.junit.Assert;
 import org.testng.annotations.Test;
 
-import com.cart.base.TestBase;
+import com.cart.base.BaseTest;
 import com.cart.pages.AddCustomerPage;
 import com.cart.pages.LoginPageU;
 
-public class TC003_AddNewCustomer extends TestBase{
+public class TC003_AddNewCustomer extends BaseTest{
 
 	public LoginPageU lp;
 	public AddCustomerPage acp;

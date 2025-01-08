@@ -4,11 +4,18 @@
 <listeners>
 <listener class-name="listner.Listner"></listener>
 </listeners>
-  <test name="E-Cart Login Test">
+  <!--<test name="E-Cart Login Test">
    <parameter name="browser" value="chrome"></parameter>
      <classes>
         <class name="com.cart.testcases.logintests.TC0002_LoginTest"/>
      </classes>
+  </test>-->
+  
+  <test name="Accessories Test">
+     <parameter name="browser" value="chrome"></parameter>
+       <classes>
+           <class name="com.cart.testcases.accesoriestests.AccesoriesTest"/>
+        </classes>
   </test>
   <!--  <test  name="E-Banking Test">
     <classes>-->

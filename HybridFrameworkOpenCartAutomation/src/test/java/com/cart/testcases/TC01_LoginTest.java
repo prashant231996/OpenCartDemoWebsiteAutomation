@@ -5,12 +5,12 @@ import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.cart.base.TestBase;
+import com.cart.base.BaseTest;
 import com.cart.pages.LoginPageU;
 
 
 
-public class TC01_LoginTest extends TestBase{
+public class TC01_LoginTest extends BaseTest{
 	
 	public LoginPageU lp;
 	

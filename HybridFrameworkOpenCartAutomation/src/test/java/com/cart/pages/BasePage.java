@@ -16,9 +16,10 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.cart.base.TestBase;
+import com.cart.base.BaseTest;
 import com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutor;
 import com.inetbanking.utilities.MyException;
+import com.inetbanking.utilities.ProductSortingValue;
 
 
 public class BasePage{
@@ -364,7 +365,7 @@ public class BasePage{
 				URL linkurl=new URL(hrefAttr);
 				conn=(HttpURLConnection)linkurl.openConnection();
 				conn.connect();
-				if(conn.getResponseCode()!=200)
+				if(conn.getResponseCode()>=400)
 				{
 					return false;
 				}
@@ -380,6 +381,21 @@ public class BasePage{
 				conn.disconnect();
 			}
 			return true;
+		}
+		
+		public void sortProduct(String sortingMechanism)
+		{
+			WebElement dropBtn=wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("orderby")));
+			Select select=new Select(dropBtn);
+			switch(sortingMechanism)
+			{
+			case "price_Low_High":select.selectByVisibleText(ProductSortingValue.Sort_By_Price_Low_To_High.dropDownValue);
+			break;
+			case "price_high_Low":select.selectByVisibleText(ProductSortingValue.Sort_By_Price_High_To_Low.dropDownValue);
+			break;
+			default:System.out.println("Invalid sorting mechanism.");
+			}
+			
 		}
 
 }

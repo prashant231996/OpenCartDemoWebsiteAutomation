@@ -40,7 +40,7 @@ import com.inetbanking.utilities.ReadConfig;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class TestBase {
+public class BaseTest {
 	
 	public WebDriver driver;
 	public String userName=ReadConfig.getPropertyValue("userName");
@@ -71,7 +71,7 @@ public class TestBase {
 	@BeforeTest
 	public void setUp(String br)
 	{
-		log=LogManager.getLogger(TestBase.class);
+		log=LogManager.getLogger(BaseTest.class);
 		if(br.equalsIgnoreCase("chrome"))
 		{
 			WebDriverManager.chromedriver().setup();
@@ -148,12 +148,12 @@ public class TestBase {
 		return extentTestThread.get();
 	}
 	
-	public WebDriver getTreadDriver()
+	public WebDriver getDriver()
 	{
 		return driverThread.get();
 	}
 	
-	public void setThreadDriver(WebDriver driver)
+	public void setDriver(WebDriver driver)
 	{
 		driverThread.set(driver);
 	}

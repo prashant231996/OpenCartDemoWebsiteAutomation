@@ -13,7 +13,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import com.cart.base.TestBase;
+import com.cart.base.BaseTest;
 import com.cart.pages.CartPage;
 import com.cart.pages.LoginPage;
 import com.cart.pages.StorePage;
@@ -21,7 +21,7 @@ import com.inetbanking.utilities.MyException;
 
 import junit.framework.Assert;
 
-public class TC0003_AddToCartTest extends TestBase{
+public class TC0003_AddToCartTest extends BaseTest{
 	
 
 //	@Test(dataProvider = "getProductDetails",dataProviderClass = com.inetbanking.dataprovider.dataProvider.class)

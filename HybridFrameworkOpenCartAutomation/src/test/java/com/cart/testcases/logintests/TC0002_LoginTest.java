@@ -12,21 +12,21 @@ import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import com.cart.base.TestBase;
+import com.cart.base.BaseTest;
 import com.cart.pages.LoginPage;
 import com.cart.pages.RegistrationPage;
 import com.inetbanking.utilities.MyException;
 import com.inetbanking.utilities.ReadConfig;
 
 
-public class TC0002_LoginTest extends TestBase{
+public class TC0002_LoginTest extends BaseTest{
 	
 	
 	@Test(priority=0,description="Verify mandatory fields on login page",enabled=true)
 	public void mandatoryDetailsOnLogin() throws MyException
 	{
 		//driver.get(baseUrl);
-		getTreadDriver().get(baseUrl);
+		getDriver().get(baseUrl);
 		LoginPage lp=new LoginPage(driverThread.get());
 		lp.doLogin("","");
 		Assert.assertTrue(lp.verifyMandatoryMsg());
@@ -39,7 +39,7 @@ public class TC0002_LoginTest extends TestBase{
 	public void loginWithInvalidCreds() throws MyException
 	{
 		//driver.get(baseUrl);
-		getTreadDriver().get(baseUrl);
+		getDriver().get(baseUrl);
 		LoginPage lp=new LoginPage(driverThread.get());
 		lp.doLogin(ReadConfig.getPropertyValue("userName"), "InvalidPassword");
 		Assert.assertTrue(lp.loginFailed());
@@ -49,7 +49,7 @@ public class TC0002_LoginTest extends TestBase{
 	@Test(priority=2,description="Login to the application using valid credentials",enabled=true)
 	public void doLoginInCart() throws MyException
 	{
-		getTreadDriver().get(baseUrl);
+		getDriver().get(baseUrl);
 		LoginPage lp=new LoginPage(driverThread.get());
 		lp.doLogin(ReadConfig.getPropertyValue("userName"), ReadConfig.getPropertyValue("passWord"));
 		Assert.assertEquals("TestName",lp.loginSuccessfullData() );
@@ -60,7 +60,7 @@ public class TC0002_LoginTest extends TestBase{
 	@Test(priority=3, description="Update password of user")
 	public void updatePasswordOfUser() throws MyException
 	{
-		getTreadDriver().get(baseUrl);
+		getDriver().get(baseUrl);
 		LoginPage lp=new LoginPage(driverThread.get());
 		lp.updatePassword(ReadConfig.getPropertyValue("userName"));
 		Assert.assertTrue(lp.passwordUpdatedSuccessfully());
@@ -71,8 +71,8 @@ public class TC0002_LoginTest extends TestBase{
 	{
 		try
 		{
-		getTreadDriver().get(baseUrl);
-		LoginPage lp=new LoginPage(driverThread.get());
+			getDriver().get(baseUrl);
+		LoginPage lp=new LoginPage(getDriver());
 		lp.navigateToLoginPage();
 		Assert.assertTrue(lp.validateBrokenLinksOnPage());
 		}

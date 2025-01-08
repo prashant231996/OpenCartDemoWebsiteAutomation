@@ -12,9 +12,9 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import com.cart.base.TestBase;
+import com.cart.base.BaseTest;
 
-public class MapWIthDataProvider extends TestBase{
+public class MapWIthDataProvider extends BaseTest{
 	
 	
 	@DataProvider(name="testData")

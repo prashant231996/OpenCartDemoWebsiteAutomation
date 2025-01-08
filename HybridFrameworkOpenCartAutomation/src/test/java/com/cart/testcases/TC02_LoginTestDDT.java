@@ -3,10 +3,10 @@ package com.cart.testcases;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.cart.base.TestBase;
+import com.cart.base.BaseTest;
 import com.cart.pages.LoginPageU;
 
-public class TC02_LoginTestDDT extends TestBase{
+public class TC02_LoginTestDDT extends BaseTest{
 	
 	public LoginPageU lp;
 	

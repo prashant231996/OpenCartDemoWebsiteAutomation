@@ -35,14 +35,13 @@ public class StorePage extends BasePage implements StorePageObjects{
 		}
 	}
 	
-	public void sortProduct(String sortingCategory) throws MyException
+	public void sortProduct(String sortingCategory) 
 	{
 		try {
 			selectByValue(relavanceDropdown, sortingCategory);
 			Thread.sleep(2000);
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new MyException("Failed to search Product");
 		}
 	}
 	

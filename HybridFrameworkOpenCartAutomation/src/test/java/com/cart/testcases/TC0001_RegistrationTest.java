@@ -6,12 +6,12 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.Status;
-import com.cart.base.TestBase;
+import com.cart.base.BaseTest;
 import com.cart.pages.RegistrationPage;
 import com.inetbanking.utilities.MyException;
 import com.inetbanking.utilities.ReadConfig;
 
-public class TC0001_RegistrationTest extends TestBase{
+public class TC0001_RegistrationTest extends BaseTest{
 	
 	@Test
 	public void TC0001_RegistrationTestCase(Method method) throws MyException
