@@ -397,5 +397,12 @@ public class BasePage{
 			}
 			
 		}
+		
+		public void searchProduct(String productName)
+		{
+			WebElement searchText=wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("woocommerce-product-search-field-0")));
+			searchText.sendKeys(productName);
+			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@value='Search']"))).click();	
+		}
 
 }

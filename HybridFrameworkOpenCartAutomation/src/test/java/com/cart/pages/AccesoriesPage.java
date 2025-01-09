@@ -37,5 +37,35 @@ public class AccesoriesPage extends BasePage implements AccesoriesPageObjects{
 		}
 		return priceArray;
 	}
+	
+	public String searchProductAndGetProductTitle(String productName) throws MyException
+	{
+		searchProduct(productName);
+		waitTillElementVisible(productTitle);
+		return identify(productTitle).getText();
+	}
+	
+	public boolean verifyProdyuctCatrgoryAsAccesories() throws MyException
+	{
+		scrollIntoView(productCategory);
+		waitTillElementVisible(accesoriesCategoryOption);
+		return identify(accesoriesCategoryOption).isSelected();
+	}
+	
+	public String getProductFromBestSeller() throws MyException
+	{
+		String productName="";
+		waitTillElementVisible(productNameFromBestSeller);
+		productName=identify(productNameFromBestSeller).getText();
+		waitTillElementClickable(productLinkFromBestSeller);
+		identify(productLinkFromBestSeller).click();
+		return productName;
+	}
+	
+	public String getProductTitle() throws MyException
+	{
+		waitTillElementVisible(productTitle);
+		return identify(productTitle).getText();
+	}
 
 }

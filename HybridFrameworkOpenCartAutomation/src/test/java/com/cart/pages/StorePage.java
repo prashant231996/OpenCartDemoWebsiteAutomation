@@ -23,7 +23,7 @@ public class StorePage extends BasePage implements StorePageObjects{
 		this.driver=driver;
 	}
 	
-	public void searchProduct(String productName) throws MyException
+	public void searchProduct(String productName)
 	{
 		try {
 			clickOn(storeLink);
@@ -31,7 +31,6 @@ public class StorePage extends BasePage implements StorePageObjects{
 			clickOn(searchBtn);
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new MyException("Failed to search Product");
 		}
 	}
 	

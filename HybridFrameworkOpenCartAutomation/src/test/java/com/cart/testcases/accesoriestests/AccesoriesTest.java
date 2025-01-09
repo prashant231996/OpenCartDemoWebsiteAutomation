@@ -3,8 +3,8 @@ package com.cart.testcases.accesoriestests;
 import java.util.Arrays;
 import java.util.List;
 
-import org.junit.Assert;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.cart.base.BaseTest;
@@ -82,6 +82,57 @@ public class AccesoriesTest extends BaseTest{
 		finally
 		{
 			
+		}
+	}
+	
+	@Test(priority=3,description="Search the product and check product name")
+	public void TC_003()
+	{
+		try
+		{
+			getDriver().get(baseUrl);
+			HomePage hmPage=new HomePage(getDriver());
+			AccesoriesPage accesoriesPage=hmPage.goToAccesoriesPage();
+			String actulaProductName=accesoriesPage.searchProductAndGetProductTitle("Anchor Bracelet");
+			Assert.assertEquals(actulaProductName,"Anchor Bracelet");
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
+	@Test(priority=4,description="BrowseByCategory is selected as accesories")
+	public void TC_004()
+	{
+		try
+		{
+			getDriver().get(baseUrl);
+			HomePage hmPage=new HomePage(getDriver());
+			AccesoriesPage accesoriesPage=hmPage.goToAccesoriesPage();
+			Assert.assertTrue(accesoriesPage.verifyProdyuctCatrgoryAsAccesories());
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
+	@Test(priority=5,description="Buy product from bestseller link and validate products")
+	public void TC_005()
+	{
+		try
+		{
+			getDriver().get(baseUrl);
+			HomePage hmPage=new HomePage(getDriver());
+			AccesoriesPage accesoriesPage=hmPage.goToAccesoriesPage();
+			String bestSellerProduct=accesoriesPage.getProductFromBestSeller();
+			String actualProduct=accesoriesPage.getProductTitle();
+			Assert.assertEquals(actualProduct, bestSellerProduct);
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
 		}
 	}
 
