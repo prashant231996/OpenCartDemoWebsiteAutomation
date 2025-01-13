@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods,   5 passed</span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,27 +104,7 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.cart.testcases.accesoriestests.AccesoriesTest" hash-for-method="TC_001">TC_001</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.cart.testcases.accesoriestests.AccesoriesTest" hash-for-method="TC_002">TC_002</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.cart.testcases.accesoriestests.AccesoriesTest" hash-for-method="TC_003">TC_003</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.cart.testcases.accesoriestests.AccesoriesTest" hash-for-method="TC_004">TC_004</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.cart.testcases.accesoriestests.AccesoriesTest" hash-for-method="TC_005">TC_005</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.cart.testcases.accesoriestests.AccesoriesTest" hash-for-method="TC_006">TC_006</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -147,47 +127,11 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="TC_001">
-                  </a> <!-- TC_001 -->
-                  <span class="method-name">TC_001</span>
+                  <a name="TC_006">
+                  </a> <!-- TC_006 -->
+                  <span class="method-name">TC_006</span>
                   <em>
-(Sort the product with respect to price from low to high)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC_002">
-                  </a> <!-- TC_002 -->
-                  <span class="method-name">TC_002</span>
-                  <em>
-(Sort the product with respect to price from high to low)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC_003">
-                  </a> <!-- TC_003 -->
-                  <span class="method-name">TC_003</span>
-                  <em>
-(Search the product and check product name)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC_004">
-                  </a> <!-- TC_004 -->
-                  <span class="method-name">TC_004</span>
-                  <em>
-(BrowseByCategory is selected as accesories)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC_005">
-                  </a> <!-- TC_005 -->
-                  <span class="method-name">TC_005</span>
-                  <em>
-(Buy product from bestseller link and validate products)                  </em>
+(Filter the product based on slider fileration)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -208,7 +152,11 @@
   &lt;test thread-count=&quot;5&quot; name=&quot;Accessories Test&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.cart.testcases.accesoriestests.AccesoriesTest&quot;/&gt;
+      &lt;class name=&quot;com.cart.testcases.accesoriestests.AccesoriesTest&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;TC_006&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.cart.testcases.accesoriestests.AccesoriesTest --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Accessories Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -248,32 +196,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(5);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'TC_001')
+data.setCell(0, 1, 'TC_006')
 data.setCell(0, 2, 'com.cart.testcases.accesoriestests.AccesoriesTest')
-data.setCell(0, 3, 8334);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'TC_003')
-data.setCell(1, 2, 'com.cart.testcases.accesoriestests.AccesoriesTest')
-data.setCell(1, 3, 4885);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'TC_004')
-data.setCell(2, 2, 'com.cart.testcases.accesoriestests.AccesoriesTest')
-data.setCell(2, 3, 2829);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'TC_002')
-data.setCell(3, 2, 'com.cart.testcases.accesoriestests.AccesoriesTest')
-data.setCell(3, 3, 2652);
-data.setCell(4, 0, 4)
-data.setCell(4, 1, 'TC_005')
-data.setCell(4, 2, 'com.cart.testcases.accesoriestests.AccesoriesTest')
-data.setCell(4, 3, 2147);
+data.setCell(0, 3, 5859);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 20 seconds</span>
+              <span class="suite-total-time">Total running time: 5 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -288,9 +220,24 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">5 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.cart.testcases.accesoriestests.AccesoriesTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">TC_004</span>
+                <br/>
+                <span class="ignored-method-name">TC_003</span>
+                <br/>
+                <span class="ignored-method-name">TC_002</span>
+                <br/>
+                <span class="ignored-method-name">TC_001</span>
+                <br/>
+                <span class="ignored-method-name">TC_005</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Suite" class="panel">
@@ -305,28 +252,12 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <span class="method-name">TC_001</span>
-                <span class="method-start">4832 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">TC_002</span>
-                <span class="method-start">13184 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">TC_003</span>
-                <span class="method-start">15838 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">TC_004</span>
-                <span class="method-start">20725 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">TC_005</span>
-                <span class="method-start">23557 ms</span>
+                <span class="method-name">TC_006</span>
+                <span class="method-start">13005 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">25710 ms</span>
+                <span class="method-start">18894 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

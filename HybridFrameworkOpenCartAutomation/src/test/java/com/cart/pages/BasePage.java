@@ -26,6 +26,7 @@ public class BasePage{
 	
 	public WebDriver driver;
 	public WebDriverWait wait;
+	public Actions action;
 	
 	@FindBy(xpath="//a[text()='Log out']")
 	WebElement logOutLink;
@@ -34,6 +35,7 @@ public class BasePage{
 	{
 		this.driver=driver;
 		wait=new WebDriverWait(driver,10);
+		action=new Actions(driver);
 	}
 	
 	public void logOutLink()
@@ -403,6 +405,11 @@ public class BasePage{
 			WebElement searchText=wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("woocommerce-product-search-field-0")));
 			searchText.sendKeys(productName);
 			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@value='Search']"))).click();	
+		}
+		
+		public void dragAndDropBy(By ele,int xaxis,int yaxis) throws MyException
+		{
+			action.dragAndDropBy(identify(ele), xaxis, yaxis);
 		}
 
 }

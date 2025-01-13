@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
+<testng-results skipped="0" failed="0" ignored="5" total="6" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="25719" started-at="2025-01-09T23:02:15 IST" finished-at="2025-01-09T23:02:41 IST">
+  <suite name="Suite" duration-ms="18918" started-at="2025-01-13T22:53:13 IST" finished-at="2025-01-13T22:53:32 IST">
     <groups>
     </groups>
-    <test name="Accessories Test" duration-ms="25719" started-at="2025-01-09T23:02:15 IST" finished-at="2025-01-09T23:02:41 IST">
+    <test name="Accessories Test" duration-ms="18918" started-at="2025-01-13T22:53:13 IST" finished-at="2025-01-13T22:53:32 IST">
       <class name="com.cart.testcases.accesoriestests.AccesoriesTest">
-        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.cart.testcases.accesoriestests.AccesoriesTest@4d339552]" name="setUp" is-config="true" duration-ms="4789" started-at="2025-01-09T23:02:15 IST" finished-at="2025-01-09T23:02:20 IST">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.cart.testcases.accesoriestests.AccesoriesTest@345965f2]" name="setUp" is-config="true" duration-ms="12932" started-at="2025-01-13T22:53:13 IST" finished-at="2025-01-13T22:53:26 IST">
           <params>
             <param index="0">
               <value>
@@ -18,27 +18,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="TC_001()[pri:1, instance:com.cart.testcases.accesoriestests.AccesoriesTest@4d339552]" name="TC_001" duration-ms="8334" started-at="2025-01-09T23:02:20 IST" description="Sort the product with respect to price from low to high" finished-at="2025-01-09T23:02:28 IST">
+        <test-method status="PASS" signature="TC_006()[pri:6, instance:com.cart.testcases.accesoriestests.AccesoriesTest@345965f2]" name="TC_006" duration-ms="5859" started-at="2025-01-13T22:53:26 IST" description="Filter the product based on slider fileration" finished-at="2025-01-13T22:53:32 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_001 -->
-        <test-method status="PASS" signature="TC_002()[pri:2, instance:com.cart.testcases.accesoriestests.AccesoriesTest@4d339552]" name="TC_002" duration-ms="2652" started-at="2025-01-09T23:02:28 IST" description="Sort the product with respect to price from high to low" finished-at="2025-01-09T23:02:31 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_002 -->
-        <test-method status="PASS" signature="TC_003()[pri:3, instance:com.cart.testcases.accesoriestests.AccesoriesTest@4d339552]" name="TC_003" duration-ms="4885" started-at="2025-01-09T23:02:31 IST" description="Search the product and check product name" finished-at="2025-01-09T23:02:36 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_003 -->
-        <test-method status="PASS" signature="TC_004()[pri:4, instance:com.cart.testcases.accesoriestests.AccesoriesTest@4d339552]" name="TC_004" duration-ms="2829" started-at="2025-01-09T23:02:36 IST" description="BrowseByCategory is selected as accesories" finished-at="2025-01-09T23:02:39 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_004 -->
-        <test-method status="PASS" signature="TC_005()[pri:5, instance:com.cart.testcases.accesoriestests.AccesoriesTest@4d339552]" name="TC_005" duration-ms="2147" started-at="2025-01-09T23:02:39 IST" description="Buy product from bestseller link and validate products" finished-at="2025-01-09T23:02:41 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_005 -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.cart.testcases.accesoriestests.AccesoriesTest@4d339552]" name="tearDown" is-config="true" duration-ms="0" started-at="2025-01-09T23:02:41 IST" finished-at="2025-01-09T23:02:41 IST">
+        </test-method> <!-- TC_006 -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.cart.testcases.accesoriestests.AccesoriesTest@345965f2]" name="tearDown" is-config="true" duration-ms="0" started-at="2025-01-13T22:53:32 IST" finished-at="2025-01-13T22:53:32 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

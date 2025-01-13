@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.server.handler.FindElement;
 
 import com.inetbanking.pageobjects.AccesoriesPageObjects;
 import com.inetbanking.utilities.MyException;
@@ -66,6 +67,14 @@ public class AccesoriesPage extends BasePage implements AccesoriesPageObjects{
 	{
 		waitTillElementVisible(productTitle);
 		return identify(productTitle).getText();
+	}
+	
+	public void filterPriceBasedOnSlider() throws MyException
+	{
+		waitTillElementVisible(minPriceSlider);
+		System.out.println(identify(minPriceSlider).getLocation());
+		//System.out.println(minPriceSlider);
+		dragAndDropBy(minPriceSlider, 500, 834);
 	}
 
 }

@@ -14,7 +14,11 @@
   <test name="Accessories Test">
      <parameter name="browser" value="chrome"></parameter>
        <classes>
-           <class name="com.cart.testcases.accesoriestests.AccesoriesTest"/>
+           <class name="com.cart.testcases.accesoriestests.AccesoriesTest">
+           <methods>
+           <include name="TC_006"/>
+           </methods>
+           </class>
         </classes>
   </test>
   <!--  <test  name="E-Banking Test">

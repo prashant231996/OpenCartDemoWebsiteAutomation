@@ -135,5 +135,21 @@ public class AccesoriesTest extends BaseTest{
 			e.printStackTrace();
 		}
 	}
+	
+	@Test(priority=6,description="Filter the product based on slider fileration")
+	public void TC_006()
+	{
+		try
+		{
+			getDriver().get(baseUrl);
+			HomePage hmPage=new HomePage(getDriver());
+			AccesoriesPage accesoriesPage=hmPage.goToAccesoriesPage();
+			accesoriesPage.filterPriceBasedOnSlider();
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
 
 }

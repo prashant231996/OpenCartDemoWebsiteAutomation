@@ -18,6 +18,10 @@ public interface AccesoriesPageObjects {
 	
 	By productNameFromBestSeller=By.xpath("//h2[text()='Our Best Sellers']/following-sibling::*//li/a//span");
 	
+	By minPriceSlider=By.xpath("(//*[@class='ui-slider-handle ui-corner-all ui-state-default'])[1]");
+	
+	By maxPriceSlider=By.xpath("(//*[@class='ui-slider-handle ui-corner-all ui-state-default'])[2]");
+	
 	
 	
 	
