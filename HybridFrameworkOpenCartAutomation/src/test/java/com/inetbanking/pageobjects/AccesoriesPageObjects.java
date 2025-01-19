@@ -22,6 +22,25 @@ public interface AccesoriesPageObjects {
 	
 	By maxPriceSlider=By.xpath("(//*[@class='ui-slider-handle ui-corner-all ui-state-default'])[2]");
 	
+	By productQuantity=By.xpath("//input[starts-with(@id,'quantity')]");
+	
+	By addToCartBtn=By.name("add-to-cart");
+	
+	By viewCart=By.xpath("//div[@role='alert']/descendant::a[text()='View cart']");
+	
+	By searchProduct=By.xpath("//input[contains(@placeholder,'Search product')]");
+	
+	By searchBtn=By.xpath("//button[@value='Search']");
+	
+	By homePageLink=By.xpath("//a[text()='Home']");
+	
+	By cartLogo=By.xpath("//a[@title='View your shopping cart']");
+	
+	By addToCartSucMsg=By.xpath("//div[@role='alert']");
+	
+	
+	
+	
 	
 	
 	

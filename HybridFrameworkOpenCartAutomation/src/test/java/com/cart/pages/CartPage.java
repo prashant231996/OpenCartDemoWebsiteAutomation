@@ -1,6 +1,10 @@
 package com.cart.pages;
 
+import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 import com.inetbanking.pageobjects.CartPageObjects;
 import com.inetbanking.utilities.MyException;
@@ -65,4 +69,72 @@ public class CartPage extends BasePage implements CartPageObjects{
 			e.printStackTrace();
 		}
 	}
+	
+	public boolean validateProductDetailsFromCartPage(String productname, String productprice,String quantity)
+	{
+		boolean flag=false;
+		try
+		{
+			List<WebElement>productRows=identifyALl(produDetailsRows);
+			for(int i=0;i<productRows.size();i++)
+			{
+				List<WebElement>productColumns=productRows.get(i).findElements(By.tagName("td"));
+				for(int j=0;j<productColumns.size();j++)
+				{
+					if(j==2)
+					{
+						if(productColumns.get(j).findElement(By.tagName("a")).getText().equalsIgnoreCase(productname))
+						{
+							flag=true;
+						}
+						else
+						{
+							return false;
+						}
+					}
+					if(j==3)
+					{
+						if(productColumns.get(j).findElement(By.xpath("//span/bdi")).getText().contains(productprice))
+						{
+							flag=true;
+						}
+						else
+						{
+							return false;
+						}
+					}
+					if(j==4)
+					{
+						if(productColumns.get(j).findElement(By.xpath("//div/input")).getAttribute("value").equalsIgnoreCase(quantity))
+						{
+							flag=true;
+						}
+						else
+						{
+							return false;
+						}
+					}
+					
+//					switch(j)
+//					{
+//					case 2:flag=productColumns.get(j).findElement(By.tagName("a")).getText().equalsIgnoreCase(productname);
+//					break;
+//					case 3:flag=productColumns.get(j).findElement(By.xpath("//span/bdi")).getText().contains(productprice);
+//					break;
+//					case 4:flag=productColumns.get(j).findElement(By.xpath("//div/input")).getAttribute("value").equalsIgnoreCase(quantity);
+//					break;
+//					default:
+//						continue;
+//					}
+				}
+			}
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+			return false;
+		}
+		return flag;
+	}
+	
 }

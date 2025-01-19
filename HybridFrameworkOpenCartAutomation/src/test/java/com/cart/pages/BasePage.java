@@ -79,6 +79,7 @@ public class BasePage{
 	{
 		WebElement element=null;
 		try {
+			waitTillElementVisible(ele);
 		 element=driver.findElement(ele);
 		} catch (Exception e) {
 			// TODO: handle exception
@@ -91,6 +92,7 @@ public class BasePage{
 		{
 			List<WebElement> elementList=null;
 			try {
+				waitTillElementVisible(ele);
 				elementList=driver.findElements(ele);
 			} catch (Exception e) {
 				// TODO: handle exception
@@ -120,6 +122,7 @@ public class BasePage{
 		{
 			boolean flag=false;
 			try {
+                waitTillElementVisible(ele);
 				flag=driver.findElement(ele).isDisplayed();
 			} catch (Exception e) {
 				e.printStackTrace();
@@ -145,6 +148,8 @@ public class BasePage{
 		public void type(By ele, String value) throws MyException
 		{
 			try {
+				waitTillElementVisible(ele);
+				identify(ele).clear();
 				identify(ele).sendKeys(value);
 			} catch (Exception e) {
 				e.printStackTrace();
@@ -182,6 +187,7 @@ public class BasePage{
 	   public void clickOn(By ele) throws MyException
 	   {
 		   try {
+			wait.until(ExpectedConditions.elementToBeClickable(ele));   
 			identify(ele).click();
 		} catch (Exception e) {
 			// TODO: handle exception
@@ -410,6 +416,14 @@ public class BasePage{
 		public void dragAndDropBy(By ele,int xaxis,int yaxis) throws MyException
 		{
 			action.dragAndDropBy(identify(ele), xaxis, yaxis);
+		}
+		
+	  //Method to do mouse hover action on element
+		public void doMouseHoverOverElement(By ele) throws MyException
+		{
+			WebElement element=identify(ele);
+			waitTillWebLementVisible(element);
+			action.moveToElement(element).build().perform();
 		}
 
 }

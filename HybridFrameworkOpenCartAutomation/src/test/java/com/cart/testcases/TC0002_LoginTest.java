@@ -1,4 +1,4 @@
-package com.cart.testcases.logintests;
+package com.cart.testcases;
 
 import java.io.File;
 import java.io.FileInputStream;

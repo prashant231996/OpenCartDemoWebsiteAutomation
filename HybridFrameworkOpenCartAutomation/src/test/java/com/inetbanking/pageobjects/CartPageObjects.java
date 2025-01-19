@@ -25,4 +25,12 @@ public interface CartPageObjects {
 	
 	By email=By.id("billing_email");
 	
+	By cartLogo=By.xpath("//a[@title='View your shopping cart']");
+	
+	By cartPageHeader=By.xpath("//h1[text()='Cart']");
+	
+	By produDetailsRows=By.xpath("//table/tbody/tr[contains(@class,'cart-form')]");
+	
+	
+	
 }

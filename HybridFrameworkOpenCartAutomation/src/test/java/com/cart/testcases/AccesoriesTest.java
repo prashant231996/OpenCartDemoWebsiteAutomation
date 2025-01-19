@@ -1,4 +1,4 @@
-package com.cart.testcases.accesoriestests;
+package com.cart.testcases;
 
 import java.util.Arrays;
 import java.util.List;
@@ -145,6 +145,45 @@ public class AccesoriesTest extends BaseTest{
 			HomePage hmPage=new HomePage(getDriver());
 			AccesoriesPage accesoriesPage=hmPage.goToAccesoriesPage();
 			accesoriesPage.filterPriceBasedOnSlider();
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
+	@Test(priority=7,description="Add product to the cart")
+	public void TC_007()
+	{
+		try
+		{
+			getDriver().get(baseUrl);
+			HomePage hmPage=new HomePage(getDriver());
+			AccesoriesPage accesoriesPage=hmPage.goToAccesoriesPage();
+			String actulaProductName=accesoriesPage.searchProductAndGetProductTitle("Anchor Bracelet");
+			Assert.assertEquals(actulaProductName,"Anchor Bracelet");
+			accesoriesPage.addProductToCart("1");
+			Assert.assertTrue(accesoriesPage.addProductToCartSuccessfully("Anchor Bracelet"));
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
+	@Test(priority=8,description="View Cart page from accesories pa")
+	public void TC_008()
+	{
+		try
+		{
+			getDriver().get(baseUrl);
+			HomePage hmPage=new HomePage(getDriver());
+			AccesoriesPage accesoriesPage=hmPage.goToAccesoriesPage();
+			String actulaProductName=accesoriesPage.searchProductAndGetProductTitle("Anchor Bracelet");
+			Assert.assertEquals(actulaProductName,"Anchor Bracelet");
+			accesoriesPage.addProductToCart("1");
+			Assert.assertTrue(accesoriesPage.addProductToCartSuccessfully("Anchor Bracelet"));
+			accesoriesPage.viewCartPage();
 		}
 		catch(Exception e)
 		{

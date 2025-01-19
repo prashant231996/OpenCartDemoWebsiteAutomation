@@ -4,16 +4,16 @@
   <listeners>
     <listener class-name="listner.Listner"/>
   </listeners>
-  <test thread-count="5" name="E-Cart Login Test(failed)">
+  <test thread-count="5" name="Cart Page Test(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.cart.testcases.logintests.TC0002_LoginTest">
+      <class name="com.cart.testcases.CartPageTests">
         <methods>
-          <include name="setUp"/>
+          <include name="TC002"/>
           <include name="tearDown"/>
-          <include name="validateLinksPresentonLoginPage"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- com.cart.testcases.logintests.TC0002_LoginTest -->
+      </class> <!-- com.cart.testcases.CartPageTests -->
     </classes>
-  </test> <!-- E-Cart Login Test(failed) -->
+  </test> <!-- Cart Page Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

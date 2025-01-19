@@ -43,5 +43,66 @@ public class HomePage extends BasePage implements HomePageObjects{
 		return new AccesoriesPage(driver);
 	}
 	
+	public CartPage navigateToCartPage()
+	{
+		try
+		{
+			clickOn(cartLogo);
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+			return null;
+		}
+		return new CartPage(driver);
+	}
+	
+	public boolean doMouseHoverOnCartLogoAndSeeMiniCartContent()
+	{
+		try
+		{
+			doMouseHoverOverElement(cartLogo);
+			try
+			{
+			isElementDisplayed(miniCartProductLink);
+			isElementDisplayed(removeItemFromMiniCart);
+			}
+			catch(Exception e)
+			{
+				e.printStackTrace();
+				return false;
+			}
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+			return false;
+		}
+		return true;
+	}
+	
+	public boolean doMouseHoverOnCartLogoWhenNoProductsAdded()
+	{
+		try
+		{
+			doMouseHoverOverElement(cartLogo);
+			try
+			{
+		    isElementDisplayed(noProductInCartMsg);
+			}
+			catch(Exception e)
+			{
+				e.printStackTrace();
+				return false;
+			}
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+			return false;
+		}
+		return true;
+	}
+	
 
 }

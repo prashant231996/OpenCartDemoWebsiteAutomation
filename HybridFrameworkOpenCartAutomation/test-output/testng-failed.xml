@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="listner.Listner"/>
+  </listeners>
+  <test thread-count="5" name="Cart Page Test(failed)">
+    <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.cart.testcases.accesoriestests.AccesoriesTest">
+      <class name="com.cart.testcases.CartPageTests">
         <methods>
+          <include name="TC002"/>
           <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="TC_006"/>
         </methods>
-      </class> <!-- com.cart.testcases.accesoriestests.AccesoriesTest -->
+      </class> <!-- com.cart.testcases.CartPageTests -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Cart Page Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

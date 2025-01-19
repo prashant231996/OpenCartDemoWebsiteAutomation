@@ -11,12 +11,34 @@
      </classes>
   </test>-->
   
-  <test name="Accessories Test">
+  <!--<test name="Accessories Test">
      <parameter name="browser" value="chrome"></parameter>
        <classes>
-           <class name="com.cart.testcases.accesoriestests.AccesoriesTest">
+           <class name="com.cart.testcases.AccesoriesTest">
            <methods>
-           <include name="TC_006"/>
+           <include name="TC_008"/>
+           </methods>
+           </class>
+        </classes>
+  </test>-->
+  
+  <!--<test name="Home Page Test">
+     <parameter name="browser" value="chrome"></parameter>
+       <classes>
+           <class name="com.cart.testcases.HomePageTests">
+           <methods>
+           <include name="TC002"/>
+           </methods>
+           </class>
+        </classes>
+  </test>-->
+  
+   <test name="Cart Page Test">
+     <parameter name="browser" value="chrome"></parameter>
+       <classes>
+           <class name="com.cart.testcases.CartPageTests">
+           <methods>
+           <include name="TC002"/>
            </methods>
            </class>
         </classes>

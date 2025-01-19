@@ -13,6 +13,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -26,6 +27,7 @@ import org.testng.asserts.SoftAssert;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.cart.pages.AccesoriesPage;
 import com.cart.pages.CartPage;
 import com.cart.pages.HomePage;
 import com.cart.pages.LoginPageU;
@@ -62,8 +64,11 @@ public class BaseTest {
 	protected static LoginPage loginPage;
 	protected static HomePage homePage;
 	protected static StorePage storePage;
+	protected static AccesoriesPage accesoriesPage;
+	protected static CartPage cartpage;
 	public WebDriverWait wait;
-	
+	public Actions act;
+	public ReadConfig config;
 	
 	SoftAssert softassert=new SoftAssert();
 	
