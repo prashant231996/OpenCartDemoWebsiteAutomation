@@ -9,7 +9,7 @@
     <classes>
       <class name="com.cart.testcases.CartPageTests">
         <methods>
-          <include name="TC002"/>
+          <include name="TC004"/>
           <include name="tearDown"/>
           <include name="setUp"/>
         </methods>

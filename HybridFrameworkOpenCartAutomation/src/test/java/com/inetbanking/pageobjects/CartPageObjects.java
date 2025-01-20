@@ -31,6 +31,10 @@ public interface CartPageObjects {
 	
 	By produDetailsRows=By.xpath("//table/tbody/tr[contains(@class,'cart-form')]");
 	
+	By updateCartBtn=By.xpath("//button[@name='update_cart']");
+	
+	By cartUpdatedMsg=By.xpath("//*[contains(text(),'Cart updated')]");
+	
 	
 	
 }

@@ -5,6 +5,7 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import com.inetbanking.pageobjects.CartPageObjects;
 import com.inetbanking.utilities.MyException;
@@ -135,6 +136,94 @@ public class CartPage extends BasePage implements CartPageObjects{
 			return false;
 		}
 		return flag;
+	}
+	
+	public void removeItemFromCart(String productname)
+	{
+		try
+		{
+			List<WebElement>productRows=identifyALl(produDetailsRows);
+			for(int i=0;i<productRows.size();i++)
+			{
+				if(productRows.get(i).findElement(By.xpath("//td[@class='product-name']/a")).getText().equalsIgnoreCase(productname))
+                  {
+	                    productRows.get(i).findElement(By.xpath("//td[@class='product-remove']/a")).click(); 
+	                    break;
+                   }
+			}
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
+	public boolean productRemovedSuccessfully(String productname)
+	{
+		try
+		{
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[contains(text(),'"+productname+"” removed')]")));
+			return driver.findElement(By.xpath("//*[contains(text(),'"+productname+"” removed')]")).isDisplayed();
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+			return false;
+		}
+	}
+	
+	public boolean validateSubTotalPriceOfProduct(String productname)
+	{
+		try
+		{
+			List<WebElement>productRows=identifyALl(produDetailsRows);
+			for(int i=0;i<productRows.size();i++)
+			{
+				if(productRows.get(i).findElement(By.xpath("//td[@class='product-name']/a")).getText().equalsIgnoreCase(productname))
+				{
+					double price=Double.parseDouble(productRows.get(i).findElement(By.xpath("//td[@class='product-price']/descendant::bdi")).getText().substring(1));
+					double quantity=Double.parseDouble(productRows.get(i).findElement(By.xpath("//td[@class='product-quantity']/div/input")).getAttribute("value"));
+					double subTotal=Double.parseDouble(productRows.get(i).findElement(By.xpath("//td[@class='product-subtotal']/descendant::bdi")).getText().substring(1));
+					if(price*quantity == subTotal)
+					{
+						return true;
+					}
+				}
+			}
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+			return false;
+		}
+		return false;
+	}
+	
+	public void updateCartDetails(String productname, String updatedCount)
+	{
+		try
+		{
+			List<WebElement>produtDetailRows=identifyALl(produDetailsRows);
+			for(int i=0;i<produtDetailRows.size();i++)
+			{
+				if(produtDetailRows.get(i).findElement(By.xpath("//td[@class='product-name']/descendant::a")).getText().equalsIgnoreCase(productname))
+				{
+					produtDetailRows.get(i).findElement(By.xpath("//td[@class='product-quantity']/descendant::input")).clear();
+					produtDetailRows.get(i).findElement(By.xpath("//td[@class='product-quantity']/descendant::input")).sendKeys(updatedCount);
+					break;
+				}
+			}
+			clickOn(updateCartBtn);
+		}
+		catch(Exception e)
+		{
+		  e.printStackTrace();
+		}
+	}
+	
+	public boolean cartUpdatedSuccessfully() throws MyException
+	{
+		return isElementDisplayed(cartUpdatedMsg);
 	}
 	
 }

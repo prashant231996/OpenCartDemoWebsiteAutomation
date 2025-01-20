@@ -104,7 +104,7 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.cart.testcases.CartPageTests" hash-for-method="TC002">TC002</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.cart.testcases.CartPageTests" hash-for-method="TC005">TC005</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -127,11 +127,11 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="TC002">
-                  </a> <!-- TC002 -->
-                  <span class="method-name">TC002</span>
+                  <a name="TC005">
+                  </a> <!-- TC005 -->
+                  <span class="method-name">TC005</span>
                   <em>
-(Validate item from the cart)                  </em>
+(Update cart details.)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -147,14 +147,15 @@
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot;&gt;
   &lt;listeners&gt;
-    &lt;listener class-name=&quot;listner.Listner&quot;/&gt;
+    &lt;listener class-name=&quot;com.cart.listner.Listner&quot;/&gt;
+    &lt;listener class-name=&quot;com.cart.retry.RetryTransformer&quot;/&gt;
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Cart Page Test&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.cart.testcases.CartPageTests&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;TC002&quot;/&gt;
+          &lt;include name=&quot;TC005&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- com.cart.testcases.CartPageTests --&gt;
     &lt;/classes&gt;
@@ -198,14 +199,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'TC002')
+data.setCell(0, 1, 'TC005')
 data.setCell(0, 2, 'com.cart.testcases.CartPageTests')
-data.setCell(0, 3, 17662);
+data.setCell(0, 3, 20520);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 17 seconds</span>
+              <span class="suite-total-time">Total running time: 20 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -220,13 +221,19 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">1 ignored method</span>
+            <span class="header-content">4 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
               <span class="ignored-class-name">com.cart.testcases.CartPageTests</span>
               <div class="ignored-methods-div">
+                <span class="ignored-method-name">TC002</span>
+                <br/>
                 <span class="ignored-method-name">TC001_add3LowestPriceItemsToCartWith</span>
+                <br/>
+                <span class="ignored-method-name">TC003</span>
+                <br/>
+                <span class="ignored-method-name">TC004</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -244,12 +251,12 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <span class="method-name">TC002</span>
-                <span class="method-start">8833 ms</span>
+                <span class="method-name">TC005</span>
+                <span class="method-start">13807 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">26525 ms</span>
+                <span class="method-start">34397 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

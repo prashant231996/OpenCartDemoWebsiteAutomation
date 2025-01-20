@@ -33,7 +33,6 @@ public class CartPageTests extends BaseTest{
 		homePage=new HomePage(getDriver());
 		accesoriesPage=homePage.goToAccesoriesPage();
 		accesoriesPage.addProductToCart("Anchor Bracelet", "2");
-		//getDriver().navigate().refresh();
 		cartpage=accesoriesPage.navigateToCartPage();
 		boolean validate=cartpage.validateProductDetailsFromCartPage("Anchor Bracelet", "10", "2");
 		Assert.assertTrue(validate);
@@ -43,6 +42,62 @@ public class CartPageTests extends BaseTest{
 			e.printStackTrace();
 		}
 		
+	}
+	
+	@Test(priority=2,description="Remove item from the cart")
+	public void TC003()
+	{
+		try
+		{
+			getDriver().get(config.getPropertyValue("baseUrl"));
+			homePage=new HomePage(getDriver());
+			accesoriesPage=homePage.goToAccesoriesPage();
+			accesoriesPage.addProductToCart("Anchor Bracelet", "2");
+			cartpage=accesoriesPage.navigateToCartPage();
+			cartpage.removeItemFromCart("Anchor Bracelet");
+			Assert.assertTrue(cartpage.productRemovedSuccessfully("Anchor Bracelet"));
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
+	@Test(priority=3,description="Validate subtotal amount from cart page")
+	public void TC004()
+	{
+		try
+		{
+			getDriver().get(config.getPropertyValue("baseUrl"));
+			homePage=new HomePage(getDriver());
+			accesoriesPage=homePage.goToAccesoriesPage();
+			accesoriesPage.addProductToCart("Anchor Bracelet", "2");
+			cartpage=accesoriesPage.navigateToCartPage();
+			Assert.assertTrue(cartpage.validateSubTotalPriceOfProduct("Anchor Bracelet"));
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
+	@Test(priority=4,description="Update cart details.")
+	public void TC005()
+	{
+		try
+		{
+			getDriver().get(config.getPropertyValue("baseUrl"));
+			homePage=new HomePage(getDriver());
+			accesoriesPage=homePage.goToAccesoriesPage();
+			accesoriesPage.addProductToCart("Anchor Bracelet", "2");
+			cartpage=accesoriesPage.navigateToCartPage();
+			cartpage.updateCartDetails("Anchor Bracelet", "3");
+			Assert.assertTrue(cartpage.cartUpdatedSuccessfully());
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
 	}
 	
 	
