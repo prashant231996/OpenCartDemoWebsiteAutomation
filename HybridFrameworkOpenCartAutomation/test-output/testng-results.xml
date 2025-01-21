@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="4" total="5" passed="1">
+<testng-results skipped="0" failed="0" ignored="7" total="8" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="34425" started-at="2025-01-20T22:42:57 IST" finished-at="2025-01-20T22:43:32 IST">
+  <suite name="Suite" duration-ms="24646" started-at="2025-01-21T22:21:39 IST" finished-at="2025-01-21T22:22:04 IST">
     <groups>
     </groups>
-    <test name="Cart Page Test" duration-ms="34425" started-at="2025-01-20T22:42:57 IST" finished-at="2025-01-20T22:43:32 IST">
+    <test name="Cart Page Test" duration-ms="24646" started-at="2025-01-21T22:21:39 IST" finished-at="2025-01-21T22:22:04 IST">
       <class name="com.cart.testcases.CartPageTests">
-        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.cart.testcases.CartPageTests@5a4aa2f2]" name="setUp" is-config="true" duration-ms="13730" started-at="2025-01-20T22:42:57 IST" finished-at="2025-01-20T22:43:11 IST">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.cart.testcases.CartPageTests@6591f517]" name="setUp" is-config="true" duration-ms="8732" started-at="2025-01-21T22:21:39 IST" finished-at="2025-01-21T22:21:48 IST">
           <params>
             <param index="0">
               <value>
@@ -18,11 +18,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="TC005()[pri:4, instance:com.cart.testcases.CartPageTests@5a4aa2f2]" name="TC005" duration-ms="20520" started-at="2025-01-20T22:43:11 IST" description="Update cart details." finished-at="2025-01-20T22:43:32 IST">
+        <test-method status="PASS" signature="TC008()[pri:7, instance:com.cart.testcases.CartPageTests@6591f517]" name="TC008" duration-ms="15771" started-at="2025-01-21T22:21:48 IST" description="Empty cart by updating quantity to zero" finished-at="2025-01-21T22:22:04 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC005 -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.cart.testcases.CartPageTests@5a4aa2f2]" name="tearDown" is-config="true" duration-ms="1" started-at="2025-01-20T22:43:32 IST" finished-at="2025-01-20T22:43:32 IST">
+        </test-method> <!-- TC008 -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.cart.testcases.CartPageTests@6591f517]" name="tearDown" is-config="true" duration-ms="1" started-at="2025-01-21T22:22:04 IST" finished-at="2025-01-21T22:22:04 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

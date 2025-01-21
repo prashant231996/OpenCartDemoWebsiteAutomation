@@ -17,7 +17,7 @@
        <classes>
            <class name="com.cart.testcases.AccesoriesTest">
            <methods>
-           <include name="TC_008"/>
+           <include name="TC006"/>
            </methods>
            </class>
         </classes>
@@ -39,7 +39,7 @@
        <classes>
            <class name="com.cart.testcases.CartPageTests">
            <methods>
-           <include name="TC005"/>
+           <include name="TC008"/>
            </methods>
            </class>
         </classes>

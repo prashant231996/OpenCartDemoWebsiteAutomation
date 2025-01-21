@@ -226,4 +226,46 @@ public class CartPage extends BasePage implements CartPageObjects{
 		return isElementDisplayed(cartUpdatedMsg);
 	}
 	
+	public void applyCouponToaddedItems(String couponCodeValue) throws MyException
+	{
+		type(couponCode, couponCodeValue);
+		clickOn(applyCouponBtn);
+	}
+	
+	public boolean couponNotExistMsg(String couponCode) 
+	{
+		return wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//*[contains(text(),'Coupon \""+couponCode+"\" does not exist!')]")))).isDisplayed();
+	}
+	
+	public boolean validateTotalPriceFromCartTotals()
+	{
+		double subTotal=0,shippingCharge=0,tax=0,total=0;
+		try
+		{
+			List<WebElement>cartTotalRows=identifyALl(cartTotalsRows);
+			subTotal=Double.parseDouble(cartTotalRows.get(0).findElement(By.xpath("//td//bdi")).getText().substring(1));
+			shippingCharge=Double.parseDouble(cartTotalRows.get(1).findElement(By.xpath("//td[@data-title='Shipping']//bdi")).getText().substring(1));
+			tax=Double.parseDouble(cartTotalRows.get(2).findElement(By.xpath("//td[@data-title='CA State Tax']/span")).getText().substring(1));
+			total=Double.parseDouble(cartTotalRows.get(3).findElement(By.xpath("//td[@data-title='Total']//bdi")).getText().substring(1));
+			if(total==subTotal+shippingCharge+tax)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+			return false;
+		}
+	}
+	
+	public boolean isCartEmpty()
+	{
+		return wait.until(ExpectedConditions.visibilityOfElementLocated(emptyCartMsg)).isDisplayed();
+	}
+	
 }

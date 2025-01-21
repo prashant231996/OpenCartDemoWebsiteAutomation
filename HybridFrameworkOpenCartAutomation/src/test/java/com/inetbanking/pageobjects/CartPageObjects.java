@@ -35,6 +35,15 @@ public interface CartPageObjects {
 	
 	By cartUpdatedMsg=By.xpath("//*[contains(text(),'Cart updated')]");
 	
+	By couponCode=By.id("coupon_code");
+	
+	By applyCouponBtn=By.xpath("//button[@name='apply_coupon']");
+	
+	By cartTotalsRows=By.xpath("//div[contains(@class,'cart_totals')]/table //tr");
+	
+	By emptyCartMsg=By.xpath("//*[contains(text(),'Your cart is currently empty.')]");
+	
+	
 	
 	
 }

@@ -92,7 +92,14 @@ public class AccesoriesPage extends BasePage implements AccesoriesPageObjects{
 	
 	public boolean addProductToCartSuccessfully(String quantity,String productName)
 	{
+		if(Integer.parseInt(quantity)>1)
+		{
 		return driver.findElement(By.xpath("//*[text()=' "+quantity+" × “"+productName+"” have been added to your cart.	']")).isDisplayed();
+		}
+		else
+		{
+			return driver.findElement(By.xpath("//*[text()=\" “"+productName+"” has been added to your cart.	\"]")).isDisplayed();
+		}
 	}
 	
 	

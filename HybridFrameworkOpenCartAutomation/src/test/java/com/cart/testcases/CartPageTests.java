@@ -100,6 +100,63 @@ public class CartPageTests extends BaseTest{
 		}
 	}
 	
+	@Test(priority=5,description="Apply coupon code to cart products")
+	public void TC006()
+	{
+		try
+		{
+			getDriver().get(config.getPropertyValue("baseUrl"));
+			homePage=new HomePage(getDriver());
+			accesoriesPage=homePage.goToAccesoriesPage();
+			accesoriesPage.addProductToCart("Anchor Bracelet", "1");
+			cartpage=accesoriesPage.navigateToCartPage();
+			cartpage.applyCouponToaddedItems("prashant");
+			Assert.assertTrue(cartpage.couponNotExistMsg("prashant"));
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
+	@Test(priority=6,description="Verify total amount from Cart Totals")
+	public void TC007()
+	{
+		try
+		{
+			getDriver().get(config.getPropertyValue("baseUrl"));
+			homePage=new HomePage(getDriver());
+			accesoriesPage=homePage.goToAccesoriesPage();
+			accesoriesPage.addProductToCart("Anchor Bracelet", "1");
+			cartpage=accesoriesPage.navigateToCartPage();
+			Assert.assertTrue(cartpage.validateTotalPriceFromCartTotals());
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
+	@Test(priority=7,description="Empty cart by updating quantity to zero")
+	public void TC008()
+	{
+		try
+		{
+			getDriver().get(config.getPropertyValue("baseUrl"));
+			homePage=new HomePage(getDriver());
+			accesoriesPage=homePage.goToAccesoriesPage();
+			accesoriesPage.addProductToCart("Anchor Bracelet", "1");
+			getDriver().navigate().refresh();
+			cartpage=accesoriesPage.navigateToCartPage();
+			cartpage.updateCartDetails("Anchor Bracelet", "0");
+			Assert.assertTrue(cartpage.cartUpdatedSuccessfully() && cartpage.isCartEmpty());
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
 	
 	
 
