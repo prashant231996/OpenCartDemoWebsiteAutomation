@@ -27,6 +27,7 @@ public class BasePage{
 	public WebDriver driver;
 	public WebDriverWait wait;
 	public Actions action;
+	public JavascriptExecutor js;
 	
 	@FindBy(xpath="//a[text()='Log out']")
 	WebElement logOutLink;
@@ -36,6 +37,7 @@ public class BasePage{
 		this.driver=driver;
 		wait=new WebDriverWait(driver,10);
 		action=new Actions(driver);
+		js=(JavascriptExecutor)driver;
 	}
 	
 	public void logOutLink()
@@ -425,5 +427,6 @@ public class BasePage{
 			waitTillWebLementVisible(element);
 			action.moveToElement(element).build().perform();
 		}
-
+		
+		
 }

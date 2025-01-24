@@ -5,16 +5,16 @@
     <listener class-name="com.cart.listner.Listner"/>
     <listener class-name="com.cart.retry.RetryTransformer"/>
   </listeners>
-  <test thread-count="5" name="Cart Page Test(failed)">
+  <test thread-count="5" name="Checkout page tests(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.cart.testcases.CartPageTests">
+      <class name="com.cart.testcases.CheckOutPageTest">
         <methods>
-          <include name="TC007"/>
+          <include name="TC002"/>
           <include name="tearDown"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- com.cart.testcases.CartPageTests -->
+      </class> <!-- com.cart.testcases.CheckOutPageTest -->
     </classes>
-  </test> <!-- Cart Page Test(failed) -->
+  </test> <!-- Checkout page tests(failed) -->
 </suite> <!-- Failed suite [Suite] -->

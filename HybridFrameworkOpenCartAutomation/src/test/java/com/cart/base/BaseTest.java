@@ -29,6 +29,7 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.cart.pages.AccesoriesPage;
 import com.cart.pages.CartPage;
+import com.cart.pages.CheckoutPage;
 import com.cart.pages.HomePage;
 import com.cart.pages.LoginPageU;
 import com.cart.pages.LoginPage;
@@ -66,6 +67,7 @@ public class BaseTest {
 	protected static StorePage storePage;
 	protected static AccesoriesPage accesoriesPage;
 	protected static CartPage cartpage;
+	protected static CheckoutPage checkCheckoutPage;
 	public WebDriverWait wait;
 	public Actions act;
 	public ReadConfig config;

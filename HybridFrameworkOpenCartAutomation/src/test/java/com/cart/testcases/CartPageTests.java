@@ -157,6 +157,25 @@ public class CartPageTests extends BaseTest{
 		}
 	}
 	
+	@Test(priority=8,description="add product to cart and proceed to checkout")
+	public void TC009()
+	{
+		try
+		{
+			getDriver().get(config.getPropertyValue("baseUrl"));
+			homePage=new HomePage(getDriver());
+			accesoriesPage=homePage.goToAccesoriesPage();
+			accesoriesPage.addProductToCart("Anchor Bracelet", "1");
+			getDriver().navigate().refresh();
+			cartpage=accesoriesPage.navigateToCartPage();
+			cartpage.checkoutProductAddedInCart();
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
 	
 	
 

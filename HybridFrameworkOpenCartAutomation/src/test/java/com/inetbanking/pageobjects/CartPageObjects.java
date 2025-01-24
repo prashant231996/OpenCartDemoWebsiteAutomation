@@ -43,6 +43,9 @@ public interface CartPageObjects {
 	
 	By emptyCartMsg=By.xpath("//*[contains(text(),'Your cart is currently empty.')]");
 	
+	By checkoutBtn=By.xpath("//a[contains(@class,'checkout-button')]");
+	
+	
 	
 	
 	

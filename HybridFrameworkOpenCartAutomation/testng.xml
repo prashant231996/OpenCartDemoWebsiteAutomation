@@ -34,15 +34,26 @@
         </classes>
   </test>-->
   
-   <test name="Cart Page Test">
+   <!--<test name="Cart Page Test">
      <parameter name="browser" value="chrome"></parameter>
        <classes>
            <class name="com.cart.testcases.CartPageTests">
            <methods>
-           <include name="TC008"/>
+           <include name="TC009"/>
            </methods>
            </class>
         </classes>
+  </test>-->
+  
+  <test name="Checkout page tests">
+     <parameter name="browser" value="chrome"></parameter>
+     <classes>
+       <class name="com.cart.testcases.CheckOutPageTest">
+         <methods>
+          <include name="TC002"/>
+         </methods>
+        </class> 
+     </classes>
   </test>
   <!--  <test  name="E-Banking Test">
     <classes>-->

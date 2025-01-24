@@ -268,4 +268,14 @@ public class CartPage extends BasePage implements CartPageObjects{
 		return wait.until(ExpectedConditions.visibilityOfElementLocated(emptyCartMsg)).isDisplayed();
 	}
 	
+	//Checkout product added in cart
+	public CheckoutPage checkoutProductAddedInCart() throws MyException
+	{
+		WebElement checkOutBtnEle=identify(checkoutBtn);
+		js.executeScript("arguments[0].scrollIntoView();", checkOutBtnEle);	
+		clickOn(checkoutBtn);
+		return new CheckoutPage(driver);
+	}
+
+	
 }
