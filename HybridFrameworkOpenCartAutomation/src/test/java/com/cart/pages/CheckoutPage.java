@@ -1,5 +1,8 @@
 package com.cart.pages;
 
+import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -54,6 +57,22 @@ public class CheckoutPage extends BasePage implements CheckoutPageObjects{
 	public boolean orderPurchaseSuccessfully()
 	{
 		return wait.until(ExpectedConditions.visibilityOfElementLocated(orderPurchaseMsg)).isDisplayed();
+	}
+	
+	public boolean verifyTotalPriceOnCheckoutPage() throws MyException
+	{
+		double subtotal=0,shipping=0,tax=0,total=0;
+		scrollIntoView(yourOrdersHeader);
+		List<WebElement>orderPriceRow=identifyALl(yourOrderFoooterTable);
+		subtotal=Double.parseDouble(orderPriceRow.get(0).findElement(By.xpath("//td//bdi")).getText().substring(1));
+		shipping=Double.parseDouble(orderPriceRow.get(1).findElement(By.xpath("//td[@data-title='Shipping']//bdi")).getText().substring(1));
+		tax=Double.parseDouble(orderPriceRow.get(2).findElement(By.xpath("//th[text()='CA State Tax']/following-sibling::td/span")).getText().substring(1));
+		total=Double.parseDouble(orderPriceRow.get(3).findElement(By.xpath("//th[text()='Total']/following-sibling::td//bdi")).getText().substring(1));
+		if(total==(subtotal+shipping+tax))
+			return true;
+		else
+			return false;
+		
 	}
 
 }

@@ -51,6 +51,26 @@ public class CheckOutPageTest extends BaseTest{
 		}
 	}
 	
+	@Test(priority=3, description = "Verify total amount from checkout page")
+	public void TC003()
+	{
+		try
+		{
+			getDriver().get(config.getPropertyValue("baseUrl"));
+			homePage=new HomePage(getDriver());
+			accesoriesPage=homePage.goToAccesoriesPage();
+			accesoriesPage.addProductToCart("Anchor Bracelet", "1");
+			getDriver().navigate().refresh();
+			cartpage=accesoriesPage.navigateToCartPage();
+			checkCheckoutPage=cartpage.checkoutProductAddedInCart();
+			Assert.assertTrue(checkCheckoutPage.verifyTotalPriceOnCheckoutPage());
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
 	
 	
 	

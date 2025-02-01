@@ -3,14 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <listeners>
     <listener class-name="com.cart.listner.Listner"/>
-    <listener class-name="com.cart.retry.RetryTransformer"/>
   </listeners>
   <test thread-count="5" name="Checkout page tests(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
       <class name="com.cart.testcases.CheckOutPageTest">
         <methods>
-          <include name="TC002"/>
+          <include name="TC003"/>
           <include name="tearDown"/>
           <include name="setUp"/>
         </methods>

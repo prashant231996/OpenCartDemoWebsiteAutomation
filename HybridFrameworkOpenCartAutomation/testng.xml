@@ -3,7 +3,7 @@
 <suite name="Suite">
 <listeners>
 <listener class-name="com.cart.listner.Listner"></listener>
-<listener class-name="com.cart.retry.RetryTransformer"></listener>
+<!--<listener class-name="com.cart.retry.RetryTransformer"></listener>-->
 </listeners>
   <!--<test name="E-Cart Login Test">
    <parameter name="browser" value="chrome"></parameter>
@@ -50,7 +50,7 @@
      <classes>
        <class name="com.cart.testcases.CheckOutPageTest">
          <methods>
-          <include name="TC002"/>
+          <include name="TC003"/>
          </methods>
         </class> 
      </classes>

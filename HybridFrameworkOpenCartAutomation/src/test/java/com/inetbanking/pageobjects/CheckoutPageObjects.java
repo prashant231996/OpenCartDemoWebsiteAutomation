@@ -35,5 +35,9 @@ public interface CheckoutPageObjects {
 	By billingState=By.id("billing_state");
 	
 	By orderPurchaseMsg=By.xpath("//*[contains(text(),'Thank you. Your order has been received.')]");
+	
+	By yourOrderFoooterTable=By.xpath("//table[contains(@class,'checkout-review-order-table')]/tfoot/tr");
+	
+	By yourOrdersHeader=By.xpath("//*[text()='Your order']");
 
 }
